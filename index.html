@@ -1159,6 +1159,41 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Video Grid - Horizontal Alignment */
+    .video-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .video-grid iframe {
+        border: 2px solid var(--border);
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+    
+    .video-grid iframe:hover {
+        border-color: var(--accent-primary);
+        transform: translateY(-4px);
+        box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+    }
+    
+    /* Responsive - Stack on mobile */
+    @media (max-width: 1200px) {
+        .video-grid {
+            flex-direction: column;
+        }
+        
+        .video-grid iframe {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            aspect-ratio: 16/9;
+        }
+    }
     </style>
 </head>
 <body>
@@ -1478,53 +1513,48 @@
     
     <!-- Digital Footprint Section -->
     <section id="knowledge">
-         <div class="container">
-             <div class="section-header">
-                 <div class="section-label">Knowledge Sharing</div>
-                 <h2>Media</h2>
+     <div class="container">
+         <div class="section-header">
+             <div class="section-label">Knowledge Sharing</div>
+             <h2>Media</h2>
+         </div>
+         <div class="contact-content">
+             <p class="contact-text">
+                 Demystifying LLMs, RAG systems, AI architectures and Papers.
+             </p>
+             <div class="video-grid">
+                 <iframe 
+                     width="360" 
+                     height="215" 
+                     src="https://www.youtube-nocookie.com/embed/91iLu6OOrwk" 
+                     title="YouTube video player" 
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen
+                     loading="lazy">
+                 </iframe>
+                 <iframe 
+                     width="360" 
+                     height="215" 
+                     src="https://www.youtube-nocookie.com/embed/mYCIRcobukI" 
+                     title="YouTube video player" 
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen
+                     loading="lazy">
+                 </iframe>
+                 <iframe 
+                     width="360" 
+                     height="215" 
+                     src="https://www.youtube-nocookie.com/embed/BGWpNQHIcs4" 
+                     title="YouTube video player" 
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen
+                     loading="lazy">
+                 </iframe>
              </div>
-             <div class="contact-content">
-                 <p class="contact-text">
-                     Demistifying LLMs, RAG systems, AI architectures and Papers.
-                 </p>
-                 
-                 <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
-                     <iframe 
-                         width="360" 
-                         height="215" 
-                         src="https://www.youtube-nocookie.com/embed/91iLu6OOrwk" 
-                         title="YouTube video player" 
-                         frameborder="0" 
-                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                         allowfullscreen
-                         loading="lazy"
-                         style="border: 2px solid var(--border); max-width: 100%;">
-                     </iframe>
-                     <iframe 
-                         width="360" 
-                         height="215" 
-                         src="https://www.youtube-nocookie.com/embed/mYCIRcobukI" 
-                         title="YouTube video player" 
-                         frameborder="0" 
-                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                         allowfullscreen
-                         loading="lazy"
-                         style="border: 2px solid var(--border); max-width: 100%;">
-                     </iframe>
-                     <iframe 
-                         width="360" 
-                         height="215" 
-                         src="https://www.youtube-nocookie.com/embed/BGWpNQHIcs4" 
-                         title="YouTube video player" 
-                         frameborder="0" 
-                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                         allowfullscreen
-                         loading="lazy"
-                         style="border: 2px solid var(--border); max-width: 100%;">
-                     </iframe>
-                 </div>
-             
-             </div>
+         </div>
          </div>
      </section>
      
