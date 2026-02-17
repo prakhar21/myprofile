@@ -1016,7 +1016,6 @@
         /* Target the iframe Medium injects AND the anchor before conversion */
         .medium-embed-wrapper iframe,
         .medium-embed-wrapper a.m-story {
-            background: transparent !important;
             display: block !important;
             width: 360px !important;
             height: 420px !important;
@@ -1024,10 +1023,7 @@
             max-width: 100% !important;
         }
         
-        .medium-embed-wrapper a.m-story > div:last-child {
-            display: none !important;
-        }
-        
+     
 
         /* ── Scroll animations ── */
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -1062,10 +1058,12 @@
             .post-grid iframe { width: 100%; max-width: 450px; height: 420px; }
             .medium-embed-wrapper { width: 100%; max-width: 450px; height: 420px; }
             .medium-embed-wrapper iframe,
-            .medium-embed-wrapper a.m-story { width: 100% !important; height: 420px !important; background: transparent !important;}
+            .medium-embed-wrapper a.m-story { width: 100% !important; height: 420px !important;}
             .chatbot-container { width: calc(100vw - 2rem); right: 1rem; left: 1rem; height: 500px; }
             .chatbot-trigger { bottom: 1.5rem; right: 1.5rem; }
             .social-links { flex-wrap: wrap; gap: 1rem; }
+            .timeline.horizontal { gap: 2rem;}
+            .timeline.horizontal .timeline-item {min-width: 320px;}
         }
 
         @media (max-width: 480px) {
@@ -1074,7 +1072,7 @@
             .post-grid iframe, .video-grid iframe { width: 100%; max-width: 100%; }
             .medium-embed-wrapper { width: 100%; max-width: 100%; }
             .medium-embed-wrapper iframe,
-            .medium-embed-wrapper a.m-story { width: 100% !important; background: transparent !important;}
+            .medium-embed-wrapper a.m-story { width: 100% !important;}
         }
         
         /* ── Instagram ── */
@@ -1169,7 +1167,6 @@
             border-color: var(--accent-primary);
         }
 
-
     </style>
 </head>
 <body>
@@ -1177,7 +1174,9 @@
     <header>
         <nav>
             <a href="#" class="logo">PM</a>
+
             <ul class="nav-links">
+                <li><a href="#education">experience</a></li>
                 <li><a href="#experience">experience</a></li>
                 <li><a href="#skills">skills</a></li>
                 <li><a href="#publications">publications</a></li>
@@ -1236,7 +1235,32 @@
             </div>
         </div>
     </section>
+    
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+        <div class="section-header">
+            <div class="section-label">ACADEMIC BACKGROUND</div>
+            <h2>Education</h2>
+        </div>
 
+        <div class="timeline horizontal">
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2012 – 2016</div>
+                <div class="timeline-title">B.Tech — Computer Science</div>
+                <div class="timeline-company">LNMIIT - Jaipur, India</div>
+                <!--<ul class="timeline-highlights">
+                </ul>-->
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2019 – 2022</div>
+                <div class="timeline-title">MS (by Research) — Data Science</div>
+                <div class="timeline-company">IIIT - Bangalore, India</div>
+            </div>
+           </div>
+        </div>
+    </section>
+    
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
