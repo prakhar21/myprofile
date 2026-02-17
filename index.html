@@ -544,104 +544,6 @@
             left: 0;
         }
 
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            overflow: hidden;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .project-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-primary);
-        }
-
-        .project-card:hover::after {
-            transform: scaleX(1);
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-
-        .project-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .project-icon {
-            font-size: 1.5rem;
-            color: var(--accent-secondary);
-        }
-
-        .project-description {
-            color: var(--text-dim);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            background: var(--code-bg);
-            color: var(--accent-primary);
-            padding: 0.3rem 0.6rem;
-            border: 1px solid var(--border);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--accent-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: var(--accent-primary);
-        }
-
         /* Publications */
         .publications-list {
             display: flex;
@@ -696,7 +598,7 @@
 
         /* Contact Section */
         .contact-content {
-            max-width: 600px;
+            max-width: 1400px;
             margin: 0 auto;
             text-align: center;
         }
@@ -1103,10 +1005,199 @@
             margin-right: 0.5rem;
         }
 
-        /* Responsive */
+        /* YouTube Stats Badge */
+        .youtube-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-left: 4px solid #FF0000;
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+
+        .youtube-stats:hover {
+            border-left-color: var(--accent-primary);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .youtube-icon {
+            font-size: 1.5rem;
+            color: #FF0000;
+        }
+
+        .youtube-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            letter-spacing: 1px;
+        }
+
+        .youtube-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Video Grid - HORIZONTAL ALIGNMENT */
+        .video-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+
+        .video-grid iframe {
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .video-grid iframe:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+        }
+
+        /* LinkedIn Stats Badge */
+        .linkedin-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem auto 2rem;
+            padding: 1rem 2rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-left: 4px solid #0A66C2;
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+
+        .linkedin-stats:hover {
+            border-left-color: var(--accent-primary);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(10, 102, 194, 0.2);
+        }
+
+        .linkedin-icon {
+            font-size: 1.5rem;
+            color: #0A66C2;
+            font-weight: bold;
+        }
+
+        .linkedin-icon::before {
+            content: 'in';
+            font-family: 'JetBrains Mono', monospace;
+            background: #0A66C2;
+            color: white;
+            padding: 0.2rem 0.4rem;
+            border-radius: 2px;
+            font-size: 1.2rem;
+        }
+
+        .linkedin-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            letter-spacing: 1px;
+        }
+
+        .linkedin-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Post Grid - HORIZONTAL ALIGNMENT */
+        .post-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+
+        .post-grid iframe {
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            background: var(--bg-secondary);
+        }
+
+        .post-grid iframe:hover {
+            border-color: #0A66C2;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(10, 102, 194, 0.3);
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 1024px) {
+            .video-grid,
+            .post-grid {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .video-grid iframe {
+                width: 360px;
+                height: 215px;
+            }
+            
+            .post-grid iframe {
+                width: 450px;
+                height: 530px;
+            }
+        }
+
         @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.75rem;
+            }
+
             h1 {
                 font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
             }
 
             .hero-subtitle {
@@ -1123,16 +1214,56 @@
                 height: 240px;
             }
 
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
             .cta-buttons {
                 flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .youtube-stats,
+            .linkedin-stats {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .video-grid {
+                flex-direction: column;
+                overflow-x: visible;
+            }
+
+            .video-grid iframe {
+                width: 100%;
+                max-width: 450px;
+                height: auto;
+                aspect-ratio: 16/9;
+            }
+
+            .post-grid {
+                flex-direction: column;
+                align-items: center;
+                overflow-x: visible;
+            }
+
+            .post-grid iframe {
+                width: 100%;
+                max-width: 450px;
+                height: 530px;
             }
 
             .chatbot-container {
@@ -1146,243 +1277,33 @@
                 bottom: 1.5rem;
                 right: 1.5rem;
             }
+
+            .social-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
         }
 
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            .nav-links a::before {
+                content: '';
+                margin-right: 0;
+            }
+
+            .post-grid iframe {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .video-grid iframe {
+                width: 100%;
+                max-width: 100%;
+            }
         }
-        /* Video Grid - Horizontal Alignment */
-    .video-grid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin-top: 2rem;
-        flex-wrap: wrap;
-    }
-    
-    .video-grid iframe {
-        border: 2px solid var(--border);
-        transition: all 0.3s ease;
-        flex-shrink: 0;
-    }
-    
-    .video-grid iframe:hover {
-        border-color: var(--accent-primary);
-        transform: translateY(-4px);
-        box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
-    }
-    
-    /* Responsive - Stack on mobile */
-    @media (max-width: 1200px) {
-        .video-grid {
-            flex-direction: column;
-        }
-        
-        .video-grid iframe {
-            width: 100%;
-            max-width: 560px;
-            height: auto;
-            aspect-ratio: 16/9;
-        }
-    }
-    /* YouTube Stats Badge */
-    .youtube-stats {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin: 2rem auto;
-        padding: 1rem 2rem;
-        background: var(--bg-secondary);
-        border: 2px solid var(--border);
-        border-left: 4px solid #FF0000;
-        max-width: 400px;
-        transition: all 0.3s ease;
-    }
-    
-    .youtube-stats:hover {
-        border-left-color: var(--accent-primary);
-        transform: translateX(5px);
-        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
-    }
-    
-    .youtube-icon {
-        font-size: 1.5rem;
-        color: #FF0000;
-        animation: pulse 2s infinite;
-    }
-    
-    .youtube-count {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--accent-primary);
-        letter-spacing: 1px;
-    }
-    
-    .youtube-label {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    
-    @keyframes pulse {
-        0%, 100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        50% {
-            transform: scale(1.1);
-            opacity: 0.8;
-        }
-    }
-    
-    /* Video Grid - Horizontal Alignment */
-    .video-grid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin-top: 2rem;
-        flex-wrap: wrap;
-    }
-    
-    .video-grid iframe {
-        border: 2px solid var(--border);
-        transition: all 0.3s ease;
-        flex-shrink: 0;
-    }
-    
-    .video-grid iframe:hover {
-        border-color: var(--accent-primary);
-        transform: translateY(-4px);
-        box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
-    }
-    
-    /* Responsive */
-    @media (max-width: 1200px) {
-        .video-grid {
-            flex-direction: column;
-        }
-        
-        .video-grid iframe {
-            width: 100%;
-            max-width: 560px;
-            height: auto;
-            aspect-ratio: 16/9;
-        }
-        
-        .youtube-stats {
-            flex-direction: column;
-            gap: 0.5rem;
-            text-align: center;
-        }
-    }
-    /* LinkedIn Stats Badge */
-    .linkedin-stats {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin: 3rem auto 2rem;
-        padding: 1rem 2rem;
-        background: var(--bg-secondary);
-        border: 2px solid var(--border);
-        border-left: 4px solid #0A66C2;
-        max-width: 400px;
-        transition: all 0.3s ease;
-    }
-    
-    .linkedin-stats:hover {
-        border-left-color: var(--accent-primary);
-        transform: translateX(5px);
-        box-shadow: 0 4px 15px rgba(10, 102, 194, 0.2);
-    }
-    
-    .linkedin-icon {
-        font-size: 1.5rem;
-        color: #0A66C2;
-        font-weight: bold;
-    }
-    
-    .linkedin-icon::before {
-        content: 'in';
-        font-family: 'JetBrains Mono', monospace;
-        background: #0A66C2;
-        color: white;
-        padding: 0.2rem 0.4rem;
-        border-radius: 2px;
-        font-size: 1.2rem;
-    }
-    
-    .linkedin-count {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--accent-primary);
-        letter-spacing: 1px;
-    }
-    
-    .linkedin-label {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    
-    /* Post Grid - Horizontal Alignment */
-    .post-grid {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 2rem;
-        margin-top: 2rem;
-        flex-wrap: wrap;
-    }
-    
-    .post-grid iframe {
-        border: 2px solid var(--border);
-        transition: all 0.3s ease;
-        flex-shrink: 0;
-        background: var(--bg-secondary);
-    }
-    
-    .post-grid iframe:hover {
-        border-color: #0A66C2;
-        transform: translateY(-4px);
-        box-shadow: 0 4px 20px rgba(10, 102, 194, 0.3);
-    }
-    
-    /* Responsive - Stack on mobile */
-    @media (max-width: 1200px) {
-        .post-grid {
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .post-grid iframe {
-            width: 100%;
-            max-width: 500px;
-        }
-        
-        .linkedin-stats {
-            flex-direction: column;
-            gap: 0.5rem;
-            text-align: center;
-        }
-    }
     </style>
 </head>
 <body>
@@ -1418,8 +1339,6 @@
                         <button onclick="openChatbot()" class="btn btn-secondary">Talk to TechViz</button>
                     </div>
                     <i><div class="timeline-date" style="font-size: 10px;">*TechViz is Prakhar's PA that knowns him in and out :-)</div></i>
-
-                    
                 </div>
                 <div class="video-container">
                     <div class="video-label">INTRO VIDEO</div>
@@ -1536,7 +1455,6 @@
                 <h2>Skills & Technologies</h2>
             </div>
             <div class="skills-container">
-                <!-- Machine Learning & Deep Learning -->
                 <span class="skill-tag fade-in">PyTorch</span>
                 <span class="skill-tag fade-in">Transformers</span>
                 <span class="skill-tag fade-in">Reinforcement Learning</span>
@@ -1558,90 +1476,9 @@
                 <span class="skill-tag fade-in">Transfer Learning</span>
                 <span class="skill-tag fade-in">Docker</span>
                 <span class="skill-tag fade-in">FastAPI</span>
-  
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <!--
-    <section id="projects">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">PORTFOLIO</div>
-                <h2>Featured Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Project Name 1</h3>
-                            <span class="project-icon">🤖</span>
-                        </div>
-                        <p class="project-description">
-                            Description of your AI/ML project. Explain the problem you solved, 
-                            the approach you took, and the impact it had. Include metrics and results.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">BERT</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">→ View Code</a>
-                            <a href="#" class="project-link">→ Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Project Name 2</h3>
-                            <span class="project-icon">🧠</span>
-                        </div>
-                        <p class="project-description">
-                            Another impressive project showcasing your ML expertise. Detail the 
-                            technical challenges, innovative solutions, and business value delivered.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Kubernetes</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">→ View Code</a>
-                            <a href="#" class="project-link">→ Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Project Name 3</h3>
-                            <span class="project-icon">📊</span>
-                        </div>
-                        <p class="project-description">
-                            A third project demonstrating breadth of skills. Could be related to 
-                            NLP, reinforcement learning, recommendation systems, or any AI domain.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">Vector DB</span>
-                            <span class="tech-tag">React</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">→ View Code</a>
-                            <a href="#" class="project-link">→ Case Study</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
 
     <!-- Publications Section -->
     <section id="publications">
@@ -1659,7 +1496,6 @@
                     <p class="publication-description">
                         Our work presents an innovative approach to enhance RAG system by incorporating output from re-ranker and iteratively refining the underlying document representations, ultimately eliminating the expense of re-ranking in production.
                     </p>
-                    <!--<a href="#" class="publication-link">Application Number: USPTO 1241esad4A</a>-->
                 </div>
                 <div class="publication-item fade-in">
                     <h3 class="publication-title">Medical Document Processing with Layout-aware OCR</h3>
@@ -1700,95 +1536,94 @@
         </div>
     </section>
     
-    <!-- Digital Footprint Section -->
+    <!-- Knowledge Sharing Section -->
     <section id="knowledge">
-     <div class="container">
-         <div class="section-header">
-             <div class="section-label">Knowledge Sharing</div>
-             <h2>Media</h2>
-         </div>
-         <div class="contact-content">
-             <p class="contact-text">
-                 Demystifying LLMs, RAG systems, AI architectures and Papers.
-             </p>
-             
-             <!-- YouTube Stats Badge -->
-             <div class="youtube-stats">
-                 <span class="youtube-icon">▶</span>
-                 <span class="youtube-count">13.5K+</span>
-                 <span class="youtube-label">YouTube Subscribers</span>
-             </div>
-             
-             <div class="video-grid">
-                 <iframe 
-                     width="360" 
-                     height="215" 
-                     src="https://www.youtube-nocookie.com/embed/91iLu6OOrwk" 
-                     title="YouTube video player" 
-                     frameborder="0" 
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                     allowfullscreen
-                     loading="lazy">
-                 </iframe>
-                 <iframe 
-                     width="360" 
-                     height="215" 
-                     src="https://www.youtube-nocookie.com/embed/mYCIRcobukI" 
-                     title="YouTube video player" 
-                     frameborder="0" 
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                     allowfullscreen
-                     loading="lazy">
-                 </iframe>
-                 <iframe 
-                     width="360" 
-                     height="215" 
-                     src="https://www.youtube-nocookie.com/embed/BGWpNQHIcs4" 
-                     title="YouTube video player" 
-                     frameborder="0" 
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                     allowfullscreen
-                     loading="lazy">
-                 </iframe>
-             </div>
-             
-              <!-- LinkedIn Stats Badge -->
-              <div class="linkedin-stats">
-                <span class="linkedin-icon"></span>
-                <span class="linkedin-count">13K+</span>
-                <span class="linkedin-label">LinkedIn Followers</span>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Knowledge Sharing</div>
+                <h2>Media</h2>
             </div>
-              
-          <div class="post-grid">
-            <iframe 
-                src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7358720805259661312?collapsed=1" 
-                height="530" 
-                width="450" 
-                frameborder="0" 
-                allowfullscreen="" 
-                title="Embedded post">
-            </iframe>
-            <iframe 
-                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7219957607380213763?collapsed=1" 
-                height="530" 
-                width="450" 
-                frameborder="0" 
-                allowfullscreen="" 
-                title="Embedded post">
-            </iframe>
-            <iframe 
-                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7109055210911641600?collapsed=1" 
-                height="530" 
-                width="450" 
-                frameborder="0" 
-                allowfullscreen="" 
-                title="Embedded post">
-            </iframe>
+            <div class="contact-content">
+                <p class="contact-text">
+                    Demystifying LLMs, RAG systems, AI architectures and Papers.
+                </p>
+                
+                <!-- YouTube Stats Badge -->
+                <div class="youtube-stats">
+                    <span class="youtube-icon">▶</span>
+                    <span class="youtube-count">13.5K+</span>
+                    <span class="youtube-label">YouTube Subscribers</span>
+                </div>
+                
+                <div class="video-grid">
+                    <iframe 
+                        width="360" 
+                        height="215" 
+                        src="https://www.youtube-nocookie.com/embed/91iLu6OOrwk" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                    <iframe 
+                        width="360" 
+                        height="215" 
+                        src="https://www.youtube-nocookie.com/embed/mYCIRcobukI" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                    <iframe 
+                        width="360" 
+                        height="215" 
+                        src="https://www.youtube-nocookie.com/embed/BGWpNQHIcs4" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                
+                <!-- LinkedIn Stats Badge -->
+                <div class="linkedin-stats">
+                    <span class="linkedin-icon"></span>
+                    <span class="linkedin-count">13K+</span>
+                    <span class="linkedin-label">LinkedIn Followers</span>
+                </div>
+                
+                <div class="post-grid">
+                    <iframe 
+                        src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7358720805259661312?collapsed=1" 
+                        height="530" 
+                        width="450" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Embedded post">
+                    </iframe>
+                    <iframe 
+                        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7219957607380213763?collapsed=1" 
+                        height="530" 
+                        width="450" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Embedded post">
+                    </iframe>
+                    <iframe 
+                        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7109055210911641600?collapsed=1" 
+                        height="530" 
+                        width="450" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Embedded post">
+                    </iframe>
+                </div>
+            </div>
         </div>
-              
-         </div>
-     </div>
- </section>
+    </section>
      
     <!-- Contact Section -->
     <section id="contact">
@@ -1802,11 +1637,6 @@
                     I'm always interested in new opportunities, collaborations, and conversations 
                     about AI/ML. Feel free to reach out through any of these channels.
                 </p>
-                <!--
-                <div class="cta-buttons">
-                    <a href="mailto:prakharmishra137@example.com" class="btn">Email Me</a>
-                </div>
-                -->
                 <div class="social-links">
                     <a href="mailto:prakharmishra137@gmail.com" class="social-link">Email</a>
                     <a href="https://github.com/prakhar21" class="social-link">GitHub</a>
@@ -1877,7 +1707,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1940,8 +1770,7 @@
         const typingIndicator = document.getElementById('typingIndicator');
         const sendButton = document.getElementById('sendButton');
 
-        // API endpoint - replace with your backend URL
-        const API_ENDPOINT = '#'; // TODO: Replace with actual API endpoint
+        const API_ENDPOINT = '#';
 
         function toggleChatbot() {
             chatbotContainer.classList.toggle('active');
@@ -2009,24 +1838,18 @@
             
             if (!message) return;
             
-            // Disable input while processing
             chatbotInput.disabled = true;
             sendButton.disabled = true;
             
-            // Add user message
             addMessage(message, true);
             chatbotInput.value = '';
             
-            // Show typing indicator
             showTypingIndicator();
             
             try {
-                // TODO: Replace with actual API call
                 if (API_ENDPOINT === '#') {
-                    // Simulated response for demo purposes
                     await new Promise(resolve => setTimeout(resolve, 1500));
                     
-                    // Demo responses based on keywords
                     let response = '';
                     const lowerMessage = message.toLowerCase();
                     
@@ -2047,7 +1870,6 @@
                     hideTypingIndicator();
                     addMessage(response);
                 } else {
-                    // Actual API call
                     const response = await fetch(API_ENDPOINT, {
                         method: 'POST',
                         headers: {
@@ -2072,7 +1894,6 @@
                 hideTypingIndicator();
                 addMessage('Sorry, I\'m having trouble connecting right now. Please try again later or use the contact form below.');
             } finally {
-                // Re-enable input
                 chatbotInput.disabled = false;
                 sendButton.disabled = false;
                 chatbotInput.focus();
@@ -2089,7 +1910,6 @@
         const introVideo = document.getElementById('introVideo');
         const muteBtn = document.getElementById('muteBtn');
 
-        // Auto-play video on load (muted)
         window.addEventListener('load', function() {
             introVideo.play().catch(err => console.log('Autoplay prevented:', err));
         });
@@ -2103,9 +1923,11 @@
         }
 
         function toggleMute(event) {
-            event.stopPropagation(); // Prevent triggering play/pause
+            event.stopPropagation();
             introVideo.muted = !introVideo.muted;
             muteBtn.textContent = introVideo.muted ? '🔇' : '🔊';
             muteBtn.title = introVideo.muted ? 'Unmute' : 'Mute';
         }
     </script>
+</body>
+</html>
