@@ -1167,9 +1167,552 @@
             border-color: var(--accent-primary);
         }
 
+        /* ── Hamburger Menu ── */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            z-index: 1100;
+            position: relative;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav-overlay.open {
+            display: block;
+            opacity: 1;
+        }
+
+        .mobile-nav-panel {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 280px;
+            height: 100%;
+            background: var(--bg-secondary);
+            border-left: 2px solid var(--accent-primary);
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            padding: 6rem 2rem 2rem;
+            gap: 0.5rem;
+            transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -10px 0 40px rgba(0,0,0,0.5);
+        }
+
+        .mobile-nav-panel.open {
+            right: 0;
+        }
+
+        .mobile-nav-panel a {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.85rem 1rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .mobile-nav-panel a::before {
+            content: '//';
+            color: var(--accent-secondary);
+            font-size: 0.85rem;
+        }
+
+        .mobile-nav-panel a:hover {
+            color: var(--accent-primary);
+            border-color: var(--border);
+            background: var(--bg-tertiary);
+            transform: translateX(4px);
+        }
+
+        .mobile-nav-divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+            margin: 1rem 0;
+        }
+
+        .mobile-lang {
+            padding: 0 1rem;
+        }
+
+        .mobile-lang select {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* ── Education Section Enhanced ── */
+        .edu-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .edu-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--accent-primary);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s ease;
+        }
+
+        .edu-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.03) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .edu-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.12);
+        }
+
+        .edu-card-second {
+            border-top-color: var(--accent-secondary);
+        }
+
+        .edu-card-second:hover {
+            border-color: var(--accent-secondary);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.12);
+        }
+
+        .edu-uni-logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            flex-shrink: 0;
+            background: var(--bg-tertiary);
+            border: 2px solid var(--border);
+            color: var(--accent-primary);
+            letter-spacing: 0.5px;
+        }
+
+        .edu-card-second .edu-uni-logo {
+            color: var(--accent-secondary);
+        }
+
+        .edu-header-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .edu-header-info {
+            flex: 1;
+        }
+
+        .edu-degree {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            line-height: 1.4;
+        }
+
+        .edu-university {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent-secondary);
+            margin-bottom: 0.15rem;
+        }
+
+        .edu-card-second .edu-university {
+            color: var(--accent-primary);
+        }
+
+        .edu-location {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        .edu-period-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--bg-primary);
+            background: var(--accent-primary);
+            padding: 0.2rem 0.65rem;
+            white-space: nowrap;
+            font-weight: 600;
+            align-self: flex-start;
+        }
+
+        .edu-card-second .edu-period-badge {
+            background: var(--accent-secondary);
+        }
+
+        .edu-divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+            margin: 1rem 0;
+        }
+
+        .edu-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .edu-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.6rem;
+            transition: all 0.2s ease;
+        }
+
+        .edu-card:hover .edu-tag {
+            border-color: rgba(0, 255, 136, 0.3);
+            color: var(--text-primary);
+        }
+
+        .edu-card-second:hover .edu-tag {
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        /* ── Knowledge Sharing Enhanced ── */
+        .platform-section {
+            margin-bottom: 4rem;
+        }
+
+        .platform-header {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            padding: 1.25rem 1.75rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .platform-header::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+        }
+
+        .platform-header.yt::before { background: #FF0000; }
+        .platform-header.li::before { background: #0A66C2; }
+        .platform-header.med::before { background: #00AB6C; }
+        .platform-header.ig::before { background: linear-gradient(#F58529, #DD2A7B); }
+
+        .platform-icon-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            color: #fff;
+        }
+
+        .platform-icon-badge.yt { background: #FF0000; }
+        .platform-icon-badge.li { background: #0A66C2; }
+        .platform-icon-badge.med { background: #00AB6C; }
+        .platform-icon-badge.ig { background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF); }
+
+        .platform-meta { flex: 1; }
+
+        .platform-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.15rem;
+        }
+
+        .platform-desc {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        .platform-stat {
+            text-align: right;
+        }
+
+        .platform-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            display: block;
+            line-height: 1;
+        }
+
+        .platform-count-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .platform-link {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-primary);
+            text-decoration: none;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            padding: 0.4rem 0.8rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .platform-link:hover {
+            background: rgba(0, 255, 136, 0.1);
+            border-color: var(--accent-primary);
+        }
+
+        .knowledge-total-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 212, 255, 0.05));
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .knowledge-total-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .knowledge-total-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .knowledge-platforms-mini {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .knowledge-platform-mini {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .knowledge-platform-mini::before {
+            content: '●';
+            font-size: 0.6rem;
+        }
+
+        /* ── Medium Cards (replace iframes) ── */
+        .medium-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-top: 0;
+        }
+
+        .medium-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .medium-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00AB6C, transparent);
+        }
+
+        .medium-card:hover {
+            border-color: #00AB6C;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 171, 108, 0.2);
+        }
+
+        .medium-card-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #00AB6C;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .medium-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        .medium-card-excerpt {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.65;
+            flex: 1;
+        }
+
+        .medium-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .medium-card-read {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: #00AB6C;
+        }
+
+        .medium-card-arrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .medium-card:hover .medium-card-arrow {
+            transform: translateX(4px);
+            color: #00AB6C;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; }
+            .lang-switcher { display: none; }
+            nav { padding: 1rem 1.25rem; }
+            .edu-cards { grid-template-columns: 1fr; }
+            .medium-card-grid { grid-template-columns: 1fr; }
+            .knowledge-total-banner { flex-direction: column; gap: 1rem; align-items: flex-start; }
+            .knowledge-platforms-mini { flex-wrap: wrap; }
+        }
+
+        @media (max-width: 480px) {
+            .edu-header-row { flex-direction: column; }
+            .edu-period-badge { align-self: flex-start; }
+            .platform-header { flex-wrap: wrap; gap: 1rem; }
+            .platform-stat { width: 100%; display: flex; align-items: center; gap: 1rem; }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .medium-card-grid { grid-template-columns: 1fr 1fr; }
+            .edu-cards { grid-template-columns: 1fr 1fr; }
+        }
+
     </style>
 </head>
 <body>
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <a href="#education" onclick="closeMobileNav()">education</a>
+        <a href="#experience" onclick="closeMobileNav()">experience</a>
+        <a href="#skills" onclick="closeMobileNav()">skills</a>
+        <a href="#publications" onclick="closeMobileNav()">publications</a>
+        <a href="#knowledge" onclick="closeMobileNav()">knowledge sharing</a>
+        <a href="#contact" onclick="closeMobileNav()">contact</a>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-lang">
+            <div class="section-label" style="margin-bottom:0.5rem;">Language</div>
+            <select id="languageSelectMobile">
+                <option value="en">EN — English</option>
+                <option value="hi">HI — हिन्दी</option>
+                <option value="es">ES — Español</option>
+                <option value="fr">FR — Français</option>
+            </select>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <header>
         <nav>
@@ -1193,6 +1736,12 @@
                     <option value="fr">FR</option>
                 </select>
             </div>
+
+            <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileNav()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -1244,20 +1793,51 @@
             <h2>Education</h2>
         </div>
 
-        <div class="timeline horizontal">
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">2012 – 2016</div>
-                <div class="timeline-title">B.Tech — Computer Science</div>
-                <div class="timeline-company">LNMIIT - Jaipur, India</div>
-                <!--<ul class="timeline-highlights">
-                </ul>-->
+        <div class="edu-cards">
+            <!-- Card 1: B.Tech -->
+            <div class="edu-card fade-in">
+                <div class="edu-header-row">
+                    <div class="edu-uni-logo">LNM</div>
+                    <div class="edu-header-info">
+                        <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
+                        <div class="edu-university">LNMIIT</div>
+                        <div class="edu-location">📍 Jaipur, Rajasthan, India</div>
+                    </div>
+                    <div class="edu-period-badge">2012 – 2016</div>
+                </div>
+                <div class="edu-divider"></div>
+                <div class="edu-tags">
+                    <span class="edu-tag">Data Structures</span>
+                    <span class="edu-tag">Algorithms</span>
+                    <span class="edu-tag">DBMS</span>
+                    <span class="edu-tag">Computer Networks</span>
+                    <span class="edu-tag">Operating Systems</span>
+                    <span class="edu-tag">Software Engineering</span>
+                </div>
             </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-date">2019 – 2022</div>
-                <div class="timeline-title">MS (by Research) — Data Science</div>
-                <div class="timeline-company">IIIT - Bangalore, India</div>
+
+            <!-- Card 2: MS -->
+            <div class="edu-card edu-card-second fade-in">
+                <div class="edu-header-row">
+                    <div class="edu-uni-logo">IIIT</div>
+                    <div class="edu-header-info">
+                        <div class="edu-degree">M.S. (by Research) — Data Science</div>
+                        <div class="edu-university">IIIT Bangalore</div>
+                        <div class="edu-location">📍 Bangalore, Karnataka, India</div>
+                    </div>
+                    <div class="edu-period-badge">2019 – 2022</div>
+                </div>
+                <div class="edu-divider"></div>
+                <div class="edu-tags">
+                    <span class="edu-tag">Machine Learning</span>
+                    <span class="edu-tag">NLP</span>
+                    <span class="edu-tag">Deep Learning</span>
+                    <span class="edu-tag">Research Methods</span>
+                    <span class="edu-tag">Statistical ML</span>
+                    <span class="edu-tag">AI Systems</span>
+                </div>
             </div>
-           </div>
+        </div>
         </div>
     </section>
     
@@ -1393,112 +1973,159 @@
             <div class="section-header">
                 <div class="section-label">Knowledge Sharing</div>
                 <h2>Digital Footprint</h2>
-                <i><span class="publication-link" style="font-size: 12px;">31,000+ Following across Platforms</span></i>
-
             </div>
+
+            <!-- Total Banner -->
+            <div class="knowledge-total-banner">
+                <div>
+                    <div class="knowledge-total-label">Total Community Reach</div>
+                    <div class="knowledge-total-num">31,000+</div>
+                </div>
+                <div class="knowledge-platforms-mini">
+                    <span class="knowledge-platform-mini" style="color:#FF0000">YouTube</span>
+                    <span class="knowledge-platform-mini" style="color:#0A66C2">LinkedIn</span>
+                    <span class="knowledge-platform-mini" style="color:#00AB6C">Medium</span>
+                    <span class="knowledge-platform-mini" style="color:#E1306C">Instagram</span>
+                </div>
+            </div>
+
             <div class="contact-content">
-                <p class="contact-text">Demystifying LLMs, RAG systems, AI architectures and Papers.</p>
+                <p class="contact-text" style="margin-bottom:3rem;">Demystifying LLMs, RAG systems, AI architectures and cutting-edge research papers — making AI accessible to everyone.</p>
 
-                <!-- YouTube -->
-                <div class="youtube-stats">
-                    <span class="youtube-icon">▶</span>
-                    <span class="youtube-count">13.5K+</span>
-                    <span class="youtube-label">YouTube Subscribers</span>
-                </div>
-                <div class="video-grid">
-                    <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/91iLu6OOrwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/mYCIRcobukI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/BGWpNQHIcs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-
-                <!-- LinkedIn -->
-                <div class="linkedin-stats">
-                    <span class="linkedin-icon"></span>
-                    <span class="linkedin-count">13K+</span>
-                    <span class="linkedin-label">LinkedIn Followers</span>
-                </div>
-                <div class="post-grid">
-                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7110967041221623809?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7102578150210965504?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7109055210911641600?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                <!-- ── YouTube ── -->
+                <div class="platform-section">
+                    <div class="platform-header yt">
+                        <div class="platform-icon-badge yt">▶</div>
+                        <div class="platform-meta">
+                            <div class="platform-name">YouTube — TechViz</div>
+                            <div class="platform-desc">Video explanations of AI/ML concepts, paper breakdowns &amp; tutorials</div>
+                        </div>
+                        <div class="platform-stat">
+                            <span class="platform-count">13.5K+</span>
+                            <span class="platform-count-label">Subscribers</span>
+                        </div>
+                        <a href="https://www.youtube.com/@TechVizTheDataScienceGuy/" target="_blank" class="platform-link">Visit →</a>
+                    </div>
+                    <div class="video-grid">
+                        <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/91iLu6OOrwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/mYCIRcobukI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/BGWpNQHIcs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
                 </div>
 
-                <!-- Medium -->
-                <div class="medium-stats">
-                    <span class="medium-icon"></span>
-                    <span class="medium-count">1.2K+</span>
-                    <span class="medium-label">Medium Followers</span>
+                <!-- ── LinkedIn ── -->
+                <div class="platform-section">
+                    <div class="platform-header li">
+                        <div class="platform-icon-badge li" style="font-size:1.1rem;letter-spacing:-0.5px;">in</div>
+                        <div class="platform-meta">
+                            <div class="platform-name">LinkedIn</div>
+                            <div class="platform-desc">Thought leadership on AI/ML, career insights &amp; professional community</div>
+                        </div>
+                        <div class="platform-stat">
+                            <span class="platform-count">13K+</span>
+                            <span class="platform-count-label">Followers</span>
+                        </div>
+                        <a href="https://linkedin.com/in/prakhar21" target="_blank" class="platform-link" style="color:#0A66C2;border-color:rgba(10,102,194,0.4);">Visit →</a>
+                    </div>
+                    <div class="post-grid">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7110967041221623809?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7102578150210965504?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7109055210911641600?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    </div>
                 </div>
 
-                <!--
-                  Each embed is wrapped in .medium-embed-wrapper (360×300px).
-                  Medium's embed.js ignores data-width/data-height on the <a>
-                  tag, so the wrapper + CSS !important rules enforce the size
-                  on the iframe that the script injects at runtime.
-                -->
-                <div class="medium-grid">
-
-                    <div class="medium-embed-wrapper">
-                        <script async src="https://static.medium.com/embed.js"></script>
-                        <a class="m-story" href="https://medium.com/data-science/8-types-of-sampling-techniques-b21adcdd2124?sk=ee1134e6f5ab5be41d704b7efb9a3c9e&card=small">
-                            8 Types of Sampling Techniques
+                <!-- ── Medium ── -->
+                <div class="platform-section">
+                    <div class="platform-header med">
+                        <div class="platform-icon-badge med" style="font-size:1.3rem;font-weight:700;">M</div>
+                        <div class="platform-meta">
+                            <div class="platform-name">Medium</div>
+                            <div class="platform-desc">In-depth articles on data science, NLP &amp; machine learning</div>
+                        </div>
+                        <div class="platform-stat">
+                            <span class="platform-count">1.2K+</span>
+                            <span class="platform-count-label">Followers</span>
+                        </div>
+                        <a href="https://prakhar-mishra.medium.com/" target="_blank" class="platform-link" style="color:#00AB6C;border-color:rgba(0,171,108,0.4);">Visit →</a>
+                    </div>
+                    <!-- Native article cards instead of embeds with white background issues -->
+                    <div class="medium-card-grid">
+                        <a class="medium-card" href="https://medium.com/data-science/8-types-of-sampling-techniques-b21adcdd2124" target="_blank">
+                            <div class="medium-card-tag">Statistics · Data Science</div>
+                            <div class="medium-card-title">8 Types of Sampling Techniques</div>
+                            <div class="medium-card-excerpt">A comprehensive breakdown of the most important sampling methods in statistics — from simple random sampling to stratified and cluster approaches — with real-world intuition for each.</div>
+                            <div class="medium-card-footer">
+                                <span class="medium-card-read">5 min read</span>
+                                <span class="medium-card-arrow">→</span>
+                            </div>
+                        </a>
+                        <a class="medium-card" href="https://medium.com/data-science/5-outlier-detection-methods-that-every-data-enthusiast-must-know-f917bf439210" target="_blank">
+                            <div class="medium-card-tag">Machine Learning · EDA</div>
+                            <div class="medium-card-title">5 Outlier Detection Methods Every Data Enthusiast Must Know</div>
+                            <div class="medium-card-excerpt">Exploring five essential techniques for identifying anomalies in your data — from IQR-based methods to Isolation Forests and Local Outlier Factor — with practical examples and when to use each.</div>
+                            <div class="medium-card-footer">
+                                <span class="medium-card-read">7 min read</span>
+                                <span class="medium-card-arrow">→</span>
+                            </div>
+                        </a>
+                        <a class="medium-card" href="https://medium.com/data-science/understanding-masked-language-models-mlm-and-causal-language-models-clm-in-nlp-194c15f56a5" target="_blank">
+                            <div class="medium-card-tag">NLP · Transformers</div>
+                            <div class="medium-card-title">Understanding MLM and CLM in NLP</div>
+                            <div class="medium-card-excerpt">A clear walkthrough of Masked Language Models (like BERT) vs Causal Language Models (like GPT) — unpacking pretraining objectives, attention masks, and why each architecture suits different downstream tasks.</div>
+                            <div class="medium-card-footer">
+                                <span class="medium-card-read">6 min read</span>
+                                <span class="medium-card-arrow">→</span>
+                            </div>
                         </a>
                     </div>
-
-                    <div class="medium-embed-wrapper">
-                        <script async src="https://static.medium.com/embed.js"></script>
-                        <a class="m-story" href="https://medium.com/data-science/5-outlier-detection-methods-that-every-data-enthusiast-must-know-f917bf439210?sk=7dfbfd1e58af5c5c3bbac32c66260438">
-                            5 Outlier Detection Techniques that every "Data Enthusiast" Must Know
-                        </a>
-                    </div>
-
-                    <div class="medium-embed-wrapper">
-                        <script async src="https://static.medium.com/embed.js"></script>
-                        <a class="m-story" href="https://medium.com/data-science/understanding-masked-language-models-mlm-and-causal-language-models-clm-in-nlp-194c15f56a5?sk=d112cce10b5dfd62f4cd68a8911b34cb">
-                            Understanding Masked Language Models (MLM) and Causal Language Models (CLM) in NLP
-                        </a>
-                    </div>
-
                 </div>
-                
-                <div class="instagram-stats">
-                    <span class="instagram-icon"></span>
-                    <span class="instagram-count">3K+</span>
-                    <span class="instagram-label">Instagram Followers</span>
-                </div>
-                
-                <div class="instagram-grid">
-                    <iframe 
-                        src="https://www.instagram.com/p/DTzz_WlkfjB/embed"
-                        width="360"
-                        height="420"
-                        frameborder="0"
-                        scrolling="no"
-                        allowtransparency="true"
-                        loading="lazy">
-                    </iframe>
-                
-                    <iframe 
-                        src="https://www.instagram.com/p/DT-H7kukQxt/embed"
-                        width="360"
-                        height="420"
-                        frameborder="0"
-                        scrolling="no"
-                        allowtransparency="true"
-                        loading="lazy">
-                    </iframe>
+
+                <!-- ── Instagram ── -->
+                <div class="platform-section">
+                    <div class="platform-header ig">
+                        <div class="platform-icon-badge ig" style="font-size:0.85rem;">IG</div>
+                        <div class="platform-meta">
+                            <div class="platform-name">Instagram</div>
+                            <div class="platform-desc">Visual AI/ML content, infographics &amp; quick concept breakdowns</div>
+                        </div>
+                        <div class="platform-stat">
+                            <span class="platform-count">3K+</span>
+                            <span class="platform-count-label">Followers</span>
+                        </div>
+                        <a href="https://instagram.com" target="_blank" class="platform-link" style="color:#E1306C;border-color:rgba(225,48,108,0.4);">Visit →</a>
+                    </div>
+                    <div class="instagram-grid">
+                        <iframe 
+                            src="https://www.instagram.com/p/DTzz_WlkfjB/embed"
+                            width="360"
+                            height="420"
+                            frameborder="0"
+                            scrolling="no"
+                            allowtransparency="true"
+                            loading="lazy">
+                        </iframe>
                     
-                    <iframe 
-                        src="https://www.instagram.com/p/DUca1yXkdnn/embed"
-                        width="360"
-                        height="420"
-                        frameborder="0"
-                        scrolling="no"
-                        allowtransparency="true"
-                        loading="lazy">
-                    </iframe>
+                        <iframe 
+                            src="https://www.instagram.com/p/DT-H7kukQxt/embed"
+                            width="360"
+                            height="420"
+                            frameborder="0"
+                            scrolling="no"
+                            allowtransparency="true"
+                            loading="lazy">
+                        </iframe>
+                        
+                        <iframe 
+                            src="https://www.instagram.com/p/DUca1yXkdnn/embed"
+                            width="360"
+                            height="420"
+                            frameborder="0"
+                            scrolling="no"
+                            allowtransparency="true"
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
-
 
             </div>
         </div>
@@ -1514,7 +2141,7 @@
             <div class="contact-content">
                 <p class="contact-text">I'm always interested in new opportunities, collaborations, and conversations about AI/ML. Feel free to reach out through any of these channels.</p>
                 <div class="social-links">
-                    <a href="mailto:prakharmishra137@gmail.com" class="social-link">Email</a>
+                    <a href="/cdn-cgi/l/email-protection#33434152585b52415e5a405b415202000473545e525a5f1d505c5e" class="social-link">Email</a>
                     <a href="https://github.com/prakhar21" class="social-link">GitHub</a>
                     <a href="https://linkedin.com/in/prakhar21" class="social-link">LinkedIn</a>
                     <a href="https://www.youtube.com/@TechVizTheDataScienceGuy/" class="social-link">YouTube</a>
@@ -1566,7 +2193,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1683,6 +2310,42 @@
 
         function handleKeyPress(event) { if (event.key === 'Enter') sendMessage(); }
 
+        // ── Hamburger / Mobile Nav ──
+        const hamburgerBtn    = document.getElementById('hamburgerBtn');
+        const mobileNavPanel  = document.getElementById('mobileNavPanel');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        const mobileSelect    = document.getElementById('languageSelectMobile');
+
+        function toggleMobileNav() {
+            const open = mobileNavPanel.classList.toggle('open');
+            mobileNavOverlay.classList.toggle('open', open);
+            hamburgerBtn.classList.toggle('open', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+
+        function closeMobileNav() {
+            mobileNavPanel.classList.remove('open');
+            mobileNavOverlay.classList.remove('open');
+            hamburgerBtn.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Sync mobile lang select with desktop one
+        if (mobileSelect) {
+            mobileSelect.value = defaultLang;
+            mobileSelect.addEventListener('change', (e) => {
+                const lang = e.target.value;
+                document.getElementById('languageSelect').value = lang;
+                localStorage.setItem('lang', lang);
+                applyTranslations(lang);
+            });
+        }
+
+        // Close mobile nav on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMobileNav();
+        });
+
         const introVideo = document.getElementById('introVideo');
         const muteBtn    = document.getElementById('muteBtn');
 
@@ -1737,11 +2400,4 @@
         
         langSelect.addEventListener("change", (e) => {
             const lang = e.target.value;
-            localStorage.setItem("lang", lang);
-            applyTranslations(lang);
-        });
-        
-        applyTranslations(defaultLang);
-    </script>
-</body>
-</html>
+            localSt
