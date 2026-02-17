@@ -1070,6 +1070,84 @@
             .medium-embed-wrapper iframe,
             .medium-embed-wrapper a.m-story { width: 100% !important; }
         }
+        
+        /* ── Instagram ── */
+        .instagram-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem auto 2rem;
+            padding: 1rem 2rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-left: 4px solid #E1306C;
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+        
+        .instagram-stats:hover {
+            border-left-color: var(--accent-primary);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(225, 48, 108, 0.25);
+        }
+        
+        .instagram-icon {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .instagram-icon::before {
+            content: 'IG';
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+            color: white;
+            padding: 0.2rem 0.4rem;
+            border-radius: 2px;
+            font-size: 1rem;
+        }
+        
+        .instagram-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            letter-spacing: 1px;
+        }
+        
+        .instagram-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .instagram-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+        
+        .instagram-grid iframe {
+            border: 2px solid var(--border);
+            background: var(--bg-secondary);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .instagram-grid iframe:hover {
+            border-color: #E1306C;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(225, 48, 108, 0.3);
+        }
+
     </style>
 </head>
 <body>
@@ -1258,7 +1336,9 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Knowledge Sharing</div>
-                <h2>Media</h2>
+                <h2>Digital Footprint</h2>
+                <i><span class="publication-link" style="font-size: 12px;">31,000+ Following across Platforms</span></i>
+
             </div>
             <div class="contact-content">
                 <p class="contact-text">Demystifying LLMs, RAG systems, AI architectures and Papers.</p>
@@ -1324,6 +1404,46 @@
                     </div>
 
                 </div>
+                
+                <div class="instagram-stats">
+                    <span class="instagram-icon"></span>
+                    <span class="instagram-count">3K+</span>
+                    <span class="instagram-label">Instagram Followers</span>
+                </div>
+                
+                <div class="instagram-grid">
+                    <iframe 
+                        src="https://www.instagram.com/p/DTzz_WlkfjB/embed"
+                        width="360"
+                        height="420"
+                        frameborder="0"
+                        scrolling="no"
+                        allowtransparency="true"
+                        loading="lazy">
+                    </iframe>
+                
+                    <iframe 
+                        src="https://www.instagram.com/p/DT-H7kukQxt/embed"
+                        width="360"
+                        height="420"
+                        frameborder="0"
+                        scrolling="no"
+                        allowtransparency="true"
+                        loading="lazy">
+                    </iframe>
+                    
+                    <iframe 
+                        src="https://www.instagram.com/p/DUca1yXkdnn/embed"
+                        width="360"
+                        height="420"
+                        frameborder="0"
+                        scrolling="no"
+                        allowtransparency="true"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+
             </div>
         </div>
     </section>
