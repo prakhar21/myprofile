@@ -256,14 +256,8 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-label {
@@ -275,9 +269,7 @@
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        .hero-label::before {
-            content: '$ ';
-        }
+        .hero-label::before { content: '$ '; }
 
         h1 {
             font-size: 4rem;
@@ -338,22 +330,15 @@
             z-index: -1;
         }
 
-        .btn:hover {
-            color: var(--bg-primary);
-        }
-
-        .btn:hover::before {
-            left: 0;
-        }
+        .btn:hover { color: var(--bg-primary); }
+        .btn:hover::before { left: 0; }
 
         .btn-secondary {
             border-color: var(--border);
             color: var(--text-primary);
         }
 
-        .btn-secondary::before {
-            background: var(--bg-tertiary);
-        }
+        .btn-secondary::before { background: var(--bg-tertiary); }
 
         .btn-secondary:hover {
             color: var(--text-primary);
@@ -365,9 +350,7 @@
             position: relative;
         }
 
-        .section-header {
-            margin-bottom: 3rem;
-        }
+        .section-header { margin-bottom: 3rem; }
 
         .section-label {
             font-family: 'JetBrains Mono', monospace;
@@ -377,9 +360,7 @@
             letter-spacing: 2px;
         }
 
-        .section-label::before {
-            content: '// ';
-        }
+        .section-label::before { content: '// '; }
 
         h2 {
             font-size: 2.5rem;
@@ -410,14 +391,8 @@
         }
 
         @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         .timeline-item::before {
@@ -482,13 +457,8 @@
             line-height: 1.5;
         }
 
-        .timeline-highlights li:hover {
-            color: var(--text-primary);
-        }
-
-        .timeline-highlights li:hover::before {
-            color: var(--accent-secondary);
-        }
+        .timeline-highlights li:hover { color: var(--text-primary); }
+        .timeline-highlights li:hover::before { color: var(--accent-secondary); }
 
         .skills-container {
             display: flex;
@@ -532,9 +502,7 @@
             box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);
         }
 
-        .skill-tag:hover::before {
-            left: 0;
-        }
+        .skill-tag:hover::before { left: 0; }
 
         .publications-list {
             display: flex;
@@ -583,9 +551,7 @@
             transition: color 0.3s ease;
         }
 
-        .publication-link:hover {
-            color: var(--accent-secondary);
-        }
+        .publication-link:hover { color: var(--accent-secondary); }
 
         .contact-content {
             max-width: 1400px;
@@ -670,12 +636,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
-            }
-            50% {
-                box-shadow: 0 4px 30px rgba(0, 255, 136, 0.6);
-            }
+            0%, 100% { box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3); }
+            50% { box-shadow: 0 4px 30px rgba(0, 255, 136, 0.6); }
         }
 
         .chatbot-trigger:hover {
@@ -704,19 +666,11 @@
         }
 
         @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .chatbot-container.active {
-            display: flex;
-        }
+        .chatbot-container.active { display: flex; }
 
         .chatbot-header {
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
@@ -737,10 +691,7 @@
             gap: 0.5rem;
         }
 
-        .chatbot-title::before {
-            content: '>';
-            font-size: 1.2rem;
-        }
+        .chatbot-title::before { content: '>'; font-size: 1.2rem; }
 
         .chatbot-status {
             font-family: 'JetBrains Mono', monospace;
@@ -770,9 +721,7 @@
             justify-content: center;
         }
 
-        .chatbot-close:hover {
-            transform: rotate(90deg);
-        }
+        .chatbot-close:hover { transform: rotate(90deg); }
 
         .chatbot-messages {
             flex: 1;
@@ -784,18 +733,9 @@
             background: var(--bg-primary);
         }
 
-        .chatbot-messages::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .chatbot-messages::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-
-        .chatbot-messages::-webkit-scrollbar-thumb {
-            background: var(--accent-primary);
-            border-radius: 4px;
-        }
+        .chatbot-messages::-webkit-scrollbar { width: 8px; }
+        .chatbot-messages::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        .chatbot-messages::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: 4px; }
 
         .message {
             display: flex;
@@ -804,24 +744,12 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .message.bot {
-            align-self: flex-start;
-        }
-
-        .message.user {
-            align-self: flex-end;
-            flex-direction: row-reverse;
-        }
+        .message.bot { align-self: flex-start; }
+        .message.user { align-self: flex-end; flex-direction: row-reverse; }
 
         .message-avatar {
             width: 32px;
@@ -857,9 +785,7 @@
             position: relative;
         }
 
-        .message.bot .message-content {
-            border-left: 3px solid var(--accent-primary);
-        }
+        .message.bot .message-content { border-left: 3px solid var(--accent-primary); }
 
         .message.user .message-content {
             background: var(--bg-tertiary);
@@ -874,15 +800,8 @@
             margin-top: 0.25rem;
         }
 
-        .typing-indicator {
-            display: none;
-            gap: 0.75rem;
-            padding: 0 1.5rem;
-        }
-
-        .typing-indicator.active {
-            display: flex;
-        }
+        .typing-indicator { display: none; gap: 0.75rem; padding: 0 1.5rem; }
+        .typing-indicator.active { display: flex; }
 
         .typing-dots {
             display: flex;
@@ -901,21 +820,12 @@
             animation: typingBounce 1.4s infinite;
         }
 
-        .typing-dot:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .typing-dot:nth-child(3) {
-            animation-delay: 0.4s;
-        }
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
 
         @keyframes typingBounce {
-            0%, 60%, 100% {
-                transform: translateY(0);
-            }
-            30% {
-                transform: translateY(-8px);
-            }
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
         }
 
         .chatbot-input-container {
@@ -938,9 +848,7 @@
             transition: border-color 0.3s ease;
         }
 
-        .chatbot-input:focus {
-            border-color: var(--accent-primary);
-        }
+        .chatbot-input:focus { border-color: var(--accent-primary); }
 
         .chatbot-input::placeholder {
             color: var(--text-dim);
@@ -963,19 +871,9 @@
             gap: 0.5rem;
         }
 
-        .chatbot-send:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4);
-        }
-
-        .chatbot-send:active {
-            transform: translateY(0);
-        }
-
-        .chatbot-send:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
+        .chatbot-send:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4); }
+        .chatbot-send:active { transform: translateY(0); }
+        .chatbot-send:disabled { opacity: 0.5; cursor: not-allowed; }
 
         .welcome-message {
             text-align: center;
@@ -987,13 +885,9 @@
             margin-bottom: 1rem;
         }
 
-        .welcome-message::before {
-            content: '//';
-            color: var(--accent-secondary);
-            margin-right: 0.5rem;
-        }
+        .welcome-message::before { content: '//'; color: var(--accent-secondary); margin-right: 0.5rem; }
 
-        /* YouTube Stats Badge */
+        /* ── YouTube ── */
         .youtube-stats {
             display: flex;
             align-items: center;
@@ -1008,34 +902,11 @@
             transition: all 0.3s ease;
         }
 
-        .youtube-stats:hover {
-            border-left-color: var(--accent-primary);
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
-        }
+        .youtube-stats:hover { border-left-color: var(--accent-primary); transform: translateX(5px); box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2); }
+        .youtube-icon { font-size: 1.5rem; color: #FF0000; }
+        .youtube-count { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; font-weight: 700; color: var(--accent-primary); letter-spacing: 1px; }
+        .youtube-label { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
 
-        .youtube-icon {
-            font-size: 1.5rem;
-            color: #FF0000;
-        }
-
-        .youtube-count {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-            letter-spacing: 1px;
-        }
-
-        .youtube-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Video Grid - HORIZONTAL ALIGNMENT */
         .video-grid {
             display: flex;
             flex-direction: row;
@@ -1048,19 +919,10 @@
             padding-bottom: 1rem;
         }
 
-        .video-grid iframe {
-            border: 2px solid var(--border);
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-        }
+        .video-grid iframe { border: 2px solid var(--border); transition: all 0.3s ease; flex-shrink: 0; }
+        .video-grid iframe:hover { border-color: var(--accent-primary); transform: translateY(-4px); box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3); }
 
-        .video-grid iframe:hover {
-            border-color: var(--accent-primary);
-            transform: translateY(-4px);
-            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
-        }
-
-        /* LinkedIn Stats Badge */
+        /* ── LinkedIn ── */
         .linkedin-stats {
             display: flex;
             align-items: center;
@@ -1075,45 +937,13 @@
             transition: all 0.3s ease;
         }
 
-        .linkedin-stats:hover {
-            border-left-color: var(--accent-primary);
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(10, 102, 194, 0.2);
-        }
+        .linkedin-stats:hover { border-left-color: var(--accent-primary); transform: translateX(5px); box-shadow: 0 4px 15px rgba(10, 102, 194, 0.2); }
 
-        .linkedin-icon {
-            font-size: 1.5rem;
-            color: #0A66C2;
-            font-weight: bold;
-        }
+        .linkedin-icon { font-size: 1.5rem; color: #0A66C2; font-weight: bold; }
+        .linkedin-icon::before { content: 'in'; font-family: 'JetBrains Mono', monospace; background: #0A66C2; color: white; padding: 0.2rem 0.4rem; border-radius: 2px; font-size: 1.2rem; }
+        .linkedin-count { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; font-weight: 700; color: var(--accent-primary); letter-spacing: 1px; }
+        .linkedin-label { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
 
-        .linkedin-icon::before {
-            content: 'in';
-            font-family: 'JetBrains Mono', monospace;
-            background: #0A66C2;
-            color: white;
-            padding: 0.2rem 0.4rem;
-            border-radius: 2px;
-            font-size: 1.2rem;
-        }
-
-        .linkedin-count {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-            letter-spacing: 1px;
-        }
-
-        .linkedin-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Post Grid - HORIZONTAL ALIGNMENT */
         .post-grid {
             display: flex;
             flex-direction: row;
@@ -1126,20 +956,10 @@
             padding-bottom: 1rem;
         }
 
-        .post-grid iframe {
-            border: 2px solid var(--border);
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-            background: var(--bg-secondary);
-        }
+        .post-grid iframe { border: 2px solid var(--border); transition: all 0.3s ease; flex-shrink: 0; background: var(--bg-secondary); }
+        .post-grid iframe:hover { border-color: #0A66C2; transform: translateY(-4px); box-shadow: 0 4px 20px rgba(10, 102, 194, 0.3); }
 
-        .post-grid iframe:hover {
-            border-color: #0A66C2;
-            transform: translateY(-4px);
-            box-shadow: 0 4px 20px rgba(10, 102, 194, 0.3);
-        }
-
-        /* Medium Stats Badge */
+        /* ── Medium ── */
         .medium-stats {
             display: flex;
             align-items: center;
@@ -1154,45 +974,16 @@
             transition: all 0.3s ease;
         }
 
-        .medium-stats:hover {
-            border-left-color: var(--accent-primary);
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(0, 171, 108, 0.2);
-        }
+        .medium-stats:hover { border-left-color: var(--accent-primary); transform: translateX(5px); box-shadow: 0 4px 15px rgba(0, 171, 108, 0.2); }
+        .medium-icon { font-size: 1.5rem; color: #00AB6C; font-weight: bold; }
+        .medium-icon::before { content: 'M'; font-family: 'JetBrains Mono', monospace; background: #00AB6C; color: white; padding: 0.2rem 0.5rem; border-radius: 2px; font-size: 1.2rem; }
+        .medium-count { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; font-weight: 700; color: var(--accent-primary); letter-spacing: 1px; }
+        .medium-label { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
 
-        .medium-icon {
-            font-size: 1.5rem;
-            color: #00AB6C;
-            font-weight: bold;
-        }
-
-        .medium-icon::before {
-            content: 'M';
-            font-family: 'JetBrains Mono', monospace;
-            background: #00AB6C;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 2px;
-            font-size: 1.2rem;
-        }
-
-        .medium-count {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-            letter-spacing: 1px;
-        }
-
-        .medium-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Medium Article Grid - HORIZONTAL ALIGNMENT */
+        /* Medium grid — uses wrapper divs because Medium's embed.js
+           converts <a class="m-story"> into an <iframe> at runtime and
+           ignores data-width / data-height. The wrapper fixes the size;
+           the !important rules force the injected iframe to obey it.   */
         .medium-grid {
             display: flex;
             flex-direction: row;
@@ -1205,167 +996,79 @@
             padding-bottom: 1rem;
         }
 
-        .medium-grid iframe {
-            border: 2px solid var(--border);
-            transition: all 0.3s ease;
+        .medium-embed-wrapper {
             flex-shrink: 0;
+            width: 360px;
+            height: 420px; /* MATCH Medium iframe height */
+            overflow: hidden;
+            border: 1px solid var(--border);
             background: var(--bg-secondary);
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
 
-        .medium-grid iframe:hover {
+        .medium-embed-wrapper:hover {
             border-color: #00AB6C;
             transform: translateY(-4px);
             box-shadow: 0 4px 20px rgba(0, 171, 108, 0.3);
         }
 
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+        /* Target the iframe Medium injects AND the anchor before conversion */
+        .medium-embed-wrapper iframe,
+        .medium-embed-wrapper a.m-story {
+            display: block !important;
+            width: 360px !important;
+            height: 400px !important;
+            border: none !important;
+            max-width: 100% !important;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* ── Scroll animations ── */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-        /* MOBILE RESPONSIVE */
+        /* ── Responsive ── */
         @media (max-width: 1024px) {
-            .video-grid,
-            .post-grid,
-            .medium-grid {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .video-grid iframe {
-                width: 360px;
-                height: 215px;
-            }
-            
-            .post-grid iframe,
-            .medium-grid iframe {
-                width: 360px;
-                height: 420px;
-            }
+            .video-grid, .post-grid, .medium-grid { flex-wrap: wrap; justify-content: center; }
+            .video-grid iframe { width: 360px; height: 215px; }
+            .post-grid iframe { width: 360px; height: 360px; }
+            .medium-embed-wrapper { width: 360px; height: 300px; }
+            .medium-embed-wrapper iframe,
+            .medium-embed-wrapper a.m-story { width: 360px !important; height: 300px !important; }
         }
 
         @media (max-width: 768px) {
-            nav {
-                padding: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.75rem;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero-wrapper {
-                flex-direction: column-reverse;
-                gap: 2rem;
-            }
-
-            .video-circle {
-                width: 240px;
-                height: 240px;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                text-align: center;
-            }
-
-            .timeline {
-                padding-left: 1.5rem;
-            }
-
-            .timeline-item {
-                padding-left: 1.5rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .youtube-stats,
-            .linkedin-stats,
-            .medium-stats {
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
-                padding: 1rem;
-            }
-
-            .video-grid,
-            .post-grid,
-            .medium-grid {
-                flex-direction: column;
-                overflow-x: visible;
-            }
-
-            .video-grid iframe {
-                width: 100%;
-                max-width: 450px;
-                height: auto;
-                aspect-ratio: 16/9;
-            }
-
-            .post-grid iframe,
-            .medium-grid iframe {
-                width: 100%;
-                max-width: 450px;
-                height: 420px;
-            }
-
-            .chatbot-container {
-                width: calc(100vw - 2rem);
-                right: 1rem;
-                left: 1rem;
-                height: 500px;
-            }
-
-            .chatbot-trigger {
-                bottom: 1.5rem;
-                right: 1.5rem;
-            }
-
-            .social-links {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
+            nav { padding: 1rem; }
+            .nav-links { gap: 1rem; font-size: 0.75rem; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero-subtitle { font-size: 1.2rem; }
+            .hero-wrapper { flex-direction: column-reverse; gap: 2rem; }
+            .video-circle { width: 240px; height: 240px; }
+            .cta-buttons { flex-direction: column; }
+            .btn { text-align: center; }
+            .timeline { padding-left: 1.5rem; }
+            .timeline-item { padding-left: 1.5rem; }
+            .container { padding: 0 1rem; }
+            .youtube-stats, .linkedin-stats, .medium-stats { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1rem; }
+            .video-grid, .post-grid, .medium-grid { flex-direction: column; overflow-x: visible; }
+            .video-grid iframe { width: 100%; max-width: 450px; height: auto; aspect-ratio: 16/9; }
+            .post-grid iframe { width: 100%; max-width: 450px; height: 420px; }
+            .medium-embed-wrapper { width: 100%; max-width: 450px; height: 500px; }
+            .medium-embed-wrapper iframe,
+            .medium-embed-wrapper a.m-story { width: 100% !important; height: 500px !important; }
+            .chatbot-container { width: calc(100vw - 2rem); right: 1rem; left: 1rem; height: 500px; }
+            .chatbot-trigger { bottom: 1.5rem; right: 1.5rem; }
+            .social-links { flex-wrap: wrap; gap: 1rem; }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .nav-links a::before {
-                content: '';
-                margin-right: 0;
-            }
-
-            .post-grid iframe,
-            .medium-grid iframe,
-            .video-grid iframe {
-                width: 100%;
-                max-width: 100%;
-            }
+            h1 { font-size: 2rem; }
+            .nav-links a::before { content: ''; margin-right: 0; }
+            .post-grid iframe, .video-grid iframe { width: 100%; max-width: 100%; }
+            .medium-embed-wrapper { width: 100%; max-width: 100%; }
+            .medium-embed-wrapper iframe,
+            .medium-embed-wrapper a.m-story { width: 100% !important; }
         }
     </style>
 </head>
@@ -1416,9 +1119,7 @@
                             </div>
                         </div>
                         <div class="video-controls">
-                            <button class="video-control-btn" id="muteBtn" onclick="toggleMute(event)" title="Unmute">
-                                🔇
-                            </button>
+                            <button class="video-control-btn" id="muteBtn" onclick="toggleMute(event)" title="Unmute">🔇</button>
                         </div>
                     </div>
                 </div>
@@ -1438,72 +1139,38 @@
                     <div class="timeline-date">June 2022 - Present</div>
                     <div class="timeline-title">Senior Machine Learning Engineer</div>
                     <div class="timeline-company">UNITED HEALTH GROUP (Optum Global Services Pvt. Ltd) - GURGAON, INDIA</div>
-                    <div class="timeline-description">
-                        Leading AI/ML initiatives and architecting production-grade machine learning systems at scale.
-                    </div>
+                    <div class="timeline-description">Leading AI/ML initiatives and architecting production-grade machine learning systems at scale.</div>
                     <ul class="timeline-highlights">
-                        <li>Architected the development of micro-services based <span style="color: #00ff88;">multi-agent RCA system powered by
-                            GenAI</span> that analyzed observability data, historical ServiceNow incidents, Knowledge bases, and
-                            product documentation to identify root causes of the incident, <span style="color: #00ff88;">reducing mean time to
-                            resolution (MTTR) by 15%</span> in initial implementation.</li>
-                        <li>Developed a multi-step AI pipeline to <span style="color: #00ff88;">detect central issues</span> and generate temporal trends from
-                        customer support tickets, fine-tuned models like T5, BART, LLaMA2, and DeBERTa to achieve
-                        <span style="color: #00ff88;">89% overall pipeline accuracy</span>.</li>
-                        <li>Designed a <span style="color: #00ff88;">scalable search utility over 8M+ call transcript</span> summaries using vector DBs, custom
-                        embeddings and hybrid search with performance optimizations, enabling fast, accurate, and
-                        intuitive access to insights; built interactive UI with Plotly and Streamlit to enhance usability.</li>
-                        <li>Devised an unsupervised ML solution to map caller intent to 1000+ taxonomy categories,
-                        reducing manual effort and boosting advocate efficiency. Implemented a 2-step pipeline using
-                        hybrid search with fine-tuned embeddings and LLMs, <span style="color: #00ff88;">achieving 74% classification accuracy</span>.</li>
-                        <li>Instrumental in developing <span style="color: #00ff88;">unsupervised method for creating a multi-level taxonomy</span> from
-                        ServiceNow ticket descriptions, improving the ticket resolution time by helping advocates gain
-                        deeper understanding and issue trends at multiple granularities. Utilized GPT-4, Faiss, Text
-                        clustering techniques and BERT for label normalization and recursive taxonomy creation.</li>
-                        <li>Implemented an automatic call summarization solution to accelerate post-call documentation
-                        for advocates. <span style="color: #00ff88;">Fine-tuned open-source LLMs</span> using GPT-4–generated data on curated contexts
-                        to mitigate context length limitations, and further enhanced performance with <span style="color: #00ff88;">RLHF
-                        techniques like DPO and ORPO<span>.</li>
+                        <li>Architected the development of micro-services based <span style="color: #00ff88;">multi-agent RCA system powered by GenAI</span> that analyzed observability data, historical ServiceNow incidents, Knowledge bases, and product documentation to identify root causes of the incident, <span style="color: #00ff88;">reducing mean time to resolution (MTTR) by 15%</span> in initial implementation.</li>
+                        <li>Developed a multi-step AI pipeline to <span style="color: #00ff88;">detect central issues</span> and generate temporal trends from customer support tickets, fine-tuned models like T5, BART, LLaMA2, and DeBERTa to achieve <span style="color: #00ff88;">89% overall pipeline accuracy</span>.</li>
+                        <li>Designed a <span style="color: #00ff88;">scalable search utility over 8M+ call transcript</span> summaries using vector DBs, custom embeddings and hybrid search with performance optimizations, enabling fast, accurate, and intuitive access to insights; built interactive UI with Plotly and Streamlit to enhance usability.</li>
+                        <li>Devised an unsupervised ML solution to map caller intent to 1000+ taxonomy categories, reducing manual effort and boosting advocate efficiency. Implemented a 2-step pipeline using hybrid search with fine-tuned embeddings and LLMs, <span style="color: #00ff88;">achieving 74% classification accuracy</span>.</li>
+                        <li>Instrumental in developing <span style="color: #00ff88;">unsupervised method for creating a multi-level taxonomy</span> from ServiceNow ticket descriptions, improving the ticket resolution time by helping advocates gain deeper understanding and issue trends at multiple granularities. Utilized GPT-4, Faiss, Text clustering techniques and BERT for label normalization and recursive taxonomy creation.</li>
+                        <li>Implemented an automatic call summarization solution to accelerate post-call documentation for advocates. <span style="color: #00ff88;">Fine-tuned open-source LLMs</span> using GPT-4–generated data on curated contexts to mitigate context length limitations, and further enhanced performance with <span style="color: #00ff88;">RLHF techniques like DPO and ORPO</span>.</li>
                     </ul>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-date">Jan 2022 - June 2022</div>
                     <div class="timeline-title">Data Science Internship - REMOTE, INDIA</div>
                     <div class="timeline-company">UDAAN</div>
-                    <div class="timeline-description">
-                    </div>
                     <ul class="timeline-highlights">
-                        <li>Led the development and optimization of <span style="color: #00ff88;">Vertical Prediction model for e-commerce search</span> queries for enhancing customer experience by providing relevant search results and recommendations. 
-                        Trained a fastText model on data collected using signals from historical user interactions with items on the platform. Improving result relevance and driving a <span style="color: #00ff88;">14% lift in Add-to-Cart orders</span> in Electronics and FMCG via A/B testing.
-                        </li>
+                        <li>Led the development and optimization of <span style="color: #00ff88;">Vertical Prediction model for e-commerce search</span> queries for enhancing customer experience by providing relevant search results and recommendations. Trained a fastText model on data collected using signals from historical user interactions with items on the platform. Improving result relevance and driving a <span style="color: #00ff88;">14% lift in Add-to-Cart orders</span> in Electronics and FMCG via A/B testing.</li>
                     </ul>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-date">Apr 2018 - June 2019</div>
                     <div class="timeline-title">Software Developer – NLP</div>
                     <div class="timeline-company">NIKI.AI (Techbins Solutions Pvt. Ltd) - BANGALORE, INDIA</div>
-                    <div class="timeline-description">
-                    </div>
                     <ul class="timeline-highlights">
-                        <li>Worked on reducing the customer churn from on-going chat session for a few verticals by
-                        developing a <span style="color: #00ff88;">domain specific Entity Extractor</span>. Trained a Bi-LSTM with pre-trained word
-                        embeddings and custom features both at word and character level. Observed <span style="color: #00ff88;">15% relative
-                        improvement on extracting entities</span> and <span style="color: #00ff88;">6.5% improvement in successful transactions</span>. Also,
-                        developed a UI application for supporting annotations.
-                        </li>
+                        <li>Worked on reducing the customer churn from on-going chat session for a few verticals by developing a <span style="color: #00ff88;">domain specific Entity Extractor</span>. Trained a Bi-LSTM with pre-trained word embeddings and custom features both at word and character level. Observed <span style="color: #00ff88;">15% relative improvement on extracting entities</span> and <span style="color: #00ff88;">6.5% improvement in successful transactions</span>. Also, developed a UI application for supporting annotations.</li>
                     </ul>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-date">June 2016 - April 2018</div>
                     <div class="timeline-title">Software Developer (R&D)</div>
                     <div class="timeline-company">FORMCEPT - BANGALORE, INDIA</div>
-                    <div class="timeline-description">
-                    </div>
                     <ul class="timeline-highlights">
-                        <li><span style="color: #00ff88;">Engineered a scalable text analytics engine from the ground up</span>, enabling range of
-                        functionalities from basic preprocessing to complex ML applications like Text Summarization
-                        and Text Search, while also developing POC applications like Legal Contract Analysis and
-                        collaborating with global clients on intricate NLP problems.
-                        </li>
+                        <li><span style="color: #00ff88;">Engineered a scalable text analytics engine from the ground up</span>, enabling range of functionalities from basic preprocessing to complex ML applications like Text Summarization and Text Search, while also developing POC applications like Legal Contract Analysis and collaborating with global clients on intricate NLP problems.</li>
                     </ul>
                 </div>
             </div>
@@ -1556,49 +1223,36 @@
                 <div class="publication-item fade-in">
                     <h3 class="publication-title">Self-Improving RAG System with Re-ranking Feedbacks</h3>
                     <div class="publication-meta">Application Number: USPTO 1241esad4A • 2025</div>
-                    <p class="publication-description">
-                        Our work presents an innovative approach to enhance RAG system by incorporating output from re-ranker and iteratively refining the underlying document representations, ultimately eliminating the expense of re-ranking in production.
-                    </p>
+                    <p class="publication-description">Our work presents an innovative approach to enhance RAG system by incorporating output from re-ranker and iteratively refining the underlying document representations, ultimately eliminating the expense of re-ranking in production.</p>
                 </div>
                 <div class="publication-item fade-in">
                     <h3 class="publication-title">Medical Document Processing with Layout-aware OCR</h3>
                     <div class="publication-meta">Application Number: USPTO 18/505,683 • 2023</div>
-                    <p class="publication-description">
-                        Our work proposes an innovative ML-based information extraction (IR) pipeline by understanding various types of nested structures present in scanned medical documents. This significantly improves upon the conventional IR pipeline that often underperforms with raw OCR outputs due to incomplete or inaccurate sentences, and loss of contextual information. 
-                    </p>
+                    <p class="publication-description">Our work proposes an innovative ML-based information extraction (IR) pipeline by understanding various types of nested structures present in scanned medical documents. This significantly improves upon the conventional IR pipeline that often underperforms with raw OCR outputs due to incomplete or inaccurate sentences, and loss of contextual information.</p>
                     <a href="https://patentimages.storage.googleapis.com/9e/22/b0/544613afb039d2/US20250157243A1.pdf" class="publication-link">→ Read Patent</a>
                 </div>
                 <div class="publication-item fade-in">
                     <h3 class="publication-title">Summarizing Short Medical Conversations with Transformers</h3>
                     <div class="publication-meta">5th Clinical Natural Language Processing Workshop at ACL • 2023</div>
-                    <p class="publication-description">
-                        Brief description of your research paper, blog post, or article. Summarize 
-                        the key findings, methodologies, or insights you shared with the community.
-                    </p>
+                    <p class="publication-description">Brief description of your research paper, blog post, or article. Summarize the key findings, methodologies, or insights you shared with the community.</p>
                     <a href="https://aclanthology.org/2023.clinicalnlp-1.44.pdf" class="publication-link">→ Read Full Paper</a>
                 </div>
                 <div class="publication-item fade-in">
                     <h3 class="publication-title">A Semi-automatic Approach for Generating Video Trailers for Learning Pathways</h3>
                     <div class="publication-meta">International Conference on Artificial Intelligence in Education (AIED) • 2022</div>
-                    <p class="publication-description">
-                        Description of another publication or technical blog post. Highlight the 
-                        problem addressed and the unique perspective or solution you provided.
-                    </p>
+                    <p class="publication-description">Description of another publication or technical blog post. Highlight the problem addressed and the unique perspective or solution you provided.</p>
                     <a href="https://link.springer.com/chapter/10.1007/978-3-031-11647-6_57" class="publication-link">→ Read Full Paper</a>
                 </div>
                 <div class="publication-item fade-in">
                     <h3 class="publication-title">Automatic Title Generation for Text with Pre-trained Transformer Language Model</h3>
                     <div class="publication-meta">International Conference on Semantic Computing (ICSC) • 2021</div>
-                    <p class="publication-description">
-                        A third publication showcasing your thought leadership and contributions 
-                        to the AI/ML community through research or educational content.
-                    </p>
+                    <p class="publication-description">A third publication showcasing your thought leadership and contributions to the AI/ML community through research or educational content.</p>
                     <a href="https://ieeexplore.ieee.org/abstract/document/9364613/" class="publication-link">→ Read Full Paper</a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Knowledge Sharing Section -->
     <section id="knowledge">
         <div class="container">
@@ -1607,119 +1261,73 @@
                 <h2>Media</h2>
             </div>
             <div class="contact-content">
-                <p class="contact-text">
-                    Demystifying LLMs, RAG systems, AI architectures and Papers.
-                </p>
-                
-                <!-- YouTube Stats Badge -->
+                <p class="contact-text">Demystifying LLMs, RAG systems, AI architectures and Papers.</p>
+
+                <!-- YouTube -->
                 <div class="youtube-stats">
                     <span class="youtube-icon">▶</span>
                     <span class="youtube-count">13.5K+</span>
                     <span class="youtube-label">YouTube Subscribers</span>
                 </div>
-                
                 <div class="video-grid">
-                    <iframe 
-                        width="360" 
-                        height="220" 
-                        src="https://www.youtube-nocookie.com/embed/91iLu6OOrwk" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                    <iframe 
-                        width="360" 
-                        height="220" 
-                        src="https://www.youtube-nocookie.com/embed/mYCIRcobukI" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                    <iframe 
-                        width="360" 
-                        height="220" 
-                        src="https://www.youtube-nocookie.com/embed/BGWpNQHIcs4" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
+                    <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/91iLu6OOrwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/mYCIRcobukI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <iframe width="360" height="220" src="https://www.youtube-nocookie.com/embed/BGWpNQHIcs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
-                
-                <!-- LinkedIn Stats Badge -->
+
+                <!-- LinkedIn -->
                 <div class="linkedin-stats">
                     <span class="linkedin-icon"></span>
                     <span class="linkedin-count">13K+</span>
                     <span class="linkedin-label">LinkedIn Followers</span>
                 </div>
-                
                 <div class="post-grid">
-                    <iframe 
-                        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7110967041221623809?collapsed=1" 
-                        height="420" 
-                        width="360" 
-                        frameborder="0" 
-                        allowfullscreen="" 
-                        title="Embedded post">
-                    </iframe>
-                    <iframe 
-                        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7102578150210965504?collapsed=1" 
-                        height="420" 
-                        width="360" 
-                        frameborder="0" 
-                        allowfullscreen="" 
-                        title="Embedded post">
-                    </iframe>
-                    <iframe 
-                        src="https://www.linkedin.com/embed/feed/update/urn:li:share:7109055210911641600?collapsed=1" 
-                        height="420" 
-                        width="360" 
-                        frameborder="0" 
-                        allowfullscreen="" 
-                        title="Embedded post">
-                    </iframe>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7110967041221623809?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7102578150210965504?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7109055210911641600?collapsed=1" height="420" width="360" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
                 </div>
 
-                <!-- Medium Stats Badge -->
+                <!-- Medium -->
                 <div class="medium-stats">
                     <span class="medium-icon"></span>
                     <span class="medium-count">1.2K+</span>
                     <span class="medium-label">Medium Followers</span>
                 </div>
-                
-                <!-- Medium Article Grid -->
+
+                <!--
+                  Each embed is wrapped in .medium-embed-wrapper (360×300px).
+                  Medium's embed.js ignores data-width/data-height on the <a>
+                  tag, so the wrapper + CSS !important rules enforce the size
+                  on the iframe that the script injects at runtime.
+                -->
                 <div class="medium-grid">
-                    <script async src="https://static.medium.com/embed.js"></script>
-                        <a class="m-story" data-width="360" data-height="300" href="https://medium.com/data-science/8-types-of-sampling-techniques-b21adcdd2124?sk=ee1134e6f5ab5be41d704b7efb9a3c9e">
+
+                    <div class="medium-embed-wrapper">
+                        <script async src="https://static.medium.com/embed.js"></script>
+                        <a class="m-story" href="https://medium.com/data-science/8-types-of-sampling-techniques-b21adcdd2124?sk=ee1134e6f5ab5be41d704b7efb9a3c9e&card=small">
                             8 Types of Sampling Techniques
                         </a>
-                                            
-                    <script async src="https://static.medium.com/embed.js"></script>
-                        <a class="m-story" data-width="360" data-height="300" href="https://medium.com/data-science/5-outlier-detection-methods-that-every-data-enthusiast-must-know-f917bf439210?sk=7dfbfd1e58af5c5c3bbac32c66260438">
-                            5 Outlier Detection Techniques that every “Data Enthusiast” Must Know
+                    </div>
+
+                    <div class="medium-embed-wrapper">
+                        <script async src="https://static.medium.com/embed.js"></script>
+                        <a class="m-story" href="https://medium.com/data-science/5-outlier-detection-methods-that-every-data-enthusiast-must-know-f917bf439210?sk=7dfbfd1e58af5c5c3bbac32c66260438">
+                            5 Outlier Detection Techniques that every "Data Enthusiast" Must Know
                         </a>
-                        
-                    <script async src="https://static.medium.com/embed.js"></script>
-                        <a class="m-story" data-width="360" data-height="300" href="https://medium.com/data-science/understanding-masked-language-models-mlm-and-causal-language-models-clm-in-nlp-194c15f56a5?sk=d112cce10b5dfd62f4cd68a8911b34cb">
+                    </div>
+
+                    <div class="medium-embed-wrapper">
+                        <script async src="https://static.medium.com/embed.js"></script>
+                        <a class="m-story" href="https://medium.com/data-science/understanding-masked-language-models-mlm-and-causal-language-models-clm-in-nlp-194c15f56a5?sk=d112cce10b5dfd62f4cd68a8911b34cb">
                             Understanding Masked Language Models (MLM) and Causal Language Models (CLM) in NLP
                         </a>
-                    
-                    
-                    <!--
-                    <script async src="https://static.medium.com/embed.js"></script>
-                        <a class="m-story" data-width="360" data-height="420" href="https://prakhar-mishra.medium.com/10-popular-keyword-extraction-algorithms-in-natural-language-processing-8975ada5750c?sk=f292dd0ffb1d8c312360cd8d070ed2d3">
-                            10 Popular Keyword Extraction Algorithms in Natural Language Processing
-                        </a>-->
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
-     
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -1728,10 +1336,7 @@
                 <h2>Let's Connect</h2>
             </div>
             <div class="contact-content">
-                <p class="contact-text">
-                    I'm always interested in new opportunities, collaborations, and conversations 
-                    about AI/ML. Feel free to reach out through any of these channels.
-                </p>
+                <p class="contact-text">I'm always interested in new opportunities, collaborations, and conversations about AI/ML. Feel free to reach out through any of these channels.</p>
                 <div class="social-links">
                     <a href="mailto:prakharmishra137@gmail.com" class="social-link">Email</a>
                     <a href="https://github.com/prakhar21" class="social-link">GitHub</a>
@@ -1744,9 +1349,7 @@
     </section>
 
     <!-- Chatbot Widget -->
-    <button class="chatbot-trigger" onclick="toggleChatbot()" id="chatbotTrigger">
-        🤖
-    </button>
+    <button class="chatbot-trigger" onclick="toggleChatbot()" id="chatbotTrigger">🤖</button>
 
     <div class="chatbot-container" id="chatbotContainer">
         <div class="chatbot-header">
@@ -1756,22 +1359,16 @@
             </div>
             <button class="chatbot-close" onclick="toggleChatbot()">×</button>
         </div>
-        
         <div class="chatbot-messages" id="chatbotMessages">
-            <div class="welcome-message">
-                Ask me anything about Prakhar's experience, projects, or skills
-            </div>
+            <div class="welcome-message">Ask me anything about Prakhar's experience, projects, or skills</div>
             <div class="message bot">
                 <div class="message-avatar">🤖</div>
                 <div>
-                    <div class="message-content">
-                        Hey there! I'm TechViz, Prakhar's AI assistant. I can help you learn more about his work, skills, and projects. What would you like to know?
-                    </div>
+                    <div class="message-content">Hey there! I'm TechViz, Prakhar's AI assistant. I can help you learn more about his work, skills, and projects. What would you like to know?</div>
                     <div class="message-time">Just now</div>
                 </div>
             </div>
         </div>
-
         <div class="typing-indicator" id="typingIndicator">
             <div class="message-avatar">🤖</div>
             <div class="typing-dots">
@@ -1780,18 +1377,9 @@
                 <div class="typing-dot"></div>
             </div>
         </div>
-
         <div class="chatbot-input-container">
-            <input 
-                type="text" 
-                class="chatbot-input" 
-                id="chatbotInput" 
-                placeholder="> type your message..."
-                onkeypress="handleKeyPress(event)"
-            />
-            <button class="chatbot-send" onclick="sendMessage()" id="sendButton">
-                Send →
-            </button>
+            <input type="text" class="chatbot-input" id="chatbotInput" placeholder="> type your message..." onkeypress="handleKeyPress(event)" />
+            <button class="chatbot-send" onclick="sendMessage()" id="sendButton">Send →</button>
         </div>
     </div>
 
@@ -1803,77 +1391,46 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Active navigation link on scroll
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-links a');
 
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
+                if (scrollY >= (section.offsetTop - 200)) current = section.getAttribute('id');
             });
-
             navLinks.forEach(link => {
                 link.style.color = '';
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.style.color = 'var(--accent-primary)';
-                }
+                if (link.getAttribute('href').slice(1) === current) link.style.color = 'var(--accent-primary)';
             });
         });
 
-        // Chatbot functionality
         const chatbotContainer = document.getElementById('chatbotContainer');
-        const chatbotTrigger = document.getElementById('chatbotTrigger');
+        const chatbotTrigger  = document.getElementById('chatbotTrigger');
         const chatbotMessages = document.getElementById('chatbotMessages');
-        const chatbotInput = document.getElementById('chatbotInput');
+        const chatbotInput    = document.getElementById('chatbotInput');
         const typingIndicator = document.getElementById('typingIndicator');
-        const sendButton = document.getElementById('sendButton');
-
-        const API_ENDPOINT = '#';
+        const sendButton      = document.getElementById('sendButton');
+        const API_ENDPOINT    = '#';
 
         function toggleChatbot() {
             chatbotContainer.classList.toggle('active');
             chatbotTrigger.classList.toggle('active');
-            
-            if (chatbotContainer.classList.contains('active')) {
-                chatbotInput.focus();
-            }
+            if (chatbotContainer.classList.contains('active')) chatbotInput.focus();
         }
 
         function openChatbot() {
@@ -1883,145 +1440,85 @@
         }
 
         function getCurrentTime() {
-            const now = new Date();
-            return now.toLocaleTimeString('en-US', { 
-                hour: 'numeric', 
-                minute: '2-digit',
-                hour12: true 
-            });
+            return new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
         }
 
         function addMessage(content, isUser = false) {
-            const messageDiv = document.createElement('div');
+            const messageDiv    = document.createElement('div');
             messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
-            
-            const avatar = document.createElement('div');
-            avatar.className = 'message-avatar';
-            avatar.textContent = isUser ? '👤' : '🤖';
-            
-            const contentWrapper = document.createElement('div');
-            
-            const messageContent = document.createElement('div');
-            messageContent.className = 'message-content';
+            const avatar        = document.createElement('div');
+            avatar.className    = 'message-avatar';
+            avatar.textContent  = isUser ? '👤' : '🤖';
+            const contentWrapper   = document.createElement('div');
+            const messageContent   = document.createElement('div');
+            messageContent.className  = 'message-content';
             messageContent.textContent = content;
-            
-            const messageTime = document.createElement('div');
-            messageTime.className = 'message-time';
+            const messageTime   = document.createElement('div');
+            messageTime.className  = 'message-time';
             messageTime.textContent = getCurrentTime();
-            
             contentWrapper.appendChild(messageContent);
             contentWrapper.appendChild(messageTime);
-            
             messageDiv.appendChild(avatar);
             messageDiv.appendChild(contentWrapper);
-            
             chatbotMessages.appendChild(messageDiv);
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }
 
-        function showTypingIndicator() {
-            typingIndicator.classList.add('active');
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-        }
-
-        function hideTypingIndicator() {
-            typingIndicator.classList.remove('active');
-        }
+        function showTypingIndicator() { typingIndicator.classList.add('active'); chatbotMessages.scrollTop = chatbotMessages.scrollHeight; }
+        function hideTypingIndicator() { typingIndicator.classList.remove('active'); }
 
         async function sendMessage() {
             const message = chatbotInput.value.trim();
-            
             if (!message) return;
-            
             chatbotInput.disabled = true;
-            sendButton.disabled = true;
-            
+            sendButton.disabled   = true;
             addMessage(message, true);
             chatbotInput.value = '';
-            
             showTypingIndicator();
-            
             try {
                 if (API_ENDPOINT === '#') {
-                    await new Promise(resolve => setTimeout(resolve, 1500));
-                    
-                    let response = '';
-                    const lowerMessage = message.toLowerCase();
-                    
-                    if (lowerMessage.includes('experience') || lowerMessage.includes('work')) {
-                        response = "Prakhar has 7+ years of experience in AI/ML engineering, working on production-grade machine learning models, NLP applications, and computer vision systems. He's held senior roles at multiple companies, leading AI initiatives and architecting scalable ML pipelines.";
-                    } else if (lowerMessage.includes('skill') || lowerMessage.includes('technology')) {
-                        response = "Prakhar is proficient in TensorFlow, PyTorch, scikit-learn, and various deep learning architectures. He has strong expertise in NLP, transformers, LLMs, and MLOps tools like Docker, Kubernetes, and cloud platforms (AWS, GCP).";
-                    } else if (lowerMessage.includes('project')) {
-                        response = "Prakhar has worked on several impressive AI/ML projects including NLP systems, computer vision applications, and LLM-powered solutions. Check out the Projects section above for detailed case studies!";
-                    } else if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('reach')) {
-                        response = "You can reach Prakhar through the contact section above. He's available via email, LinkedIn, and GitHub. Feel free to scroll down to the contact section to get in touch!";
-                    } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-                        response = "Hello! I'm here to help you learn more about Prakhar's work. You can ask me about his experience, technical skills, projects, or how to get in touch with him.";
-                    } else {
-                        response = "That's a great question! I can tell you about Prakhar's experience, technical skills, projects, or publications. What would you like to know more about?";
-                    }
-                    
+                    await new Promise(r => setTimeout(r, 1500));
+                    const lm = message.toLowerCase();
+                    let response = "That's a great question! I can tell you about Prakhar's experience, technical skills, projects, or publications. What would you like to know more about?";
+                    if (lm.includes('experience') || lm.includes('work')) response = "Prakhar has 7+ years of experience in AI/ML engineering, working on production-grade machine learning models, NLP applications, and computer vision systems.";
+                    else if (lm.includes('skill') || lm.includes('technology')) response = "Prakhar is proficient in PyTorch, Transformers, LLMs, and various deep learning architectures with strong expertise in NLP, RAG, and Agentic AI.";
+                    else if (lm.includes('project')) response = "Prakhar has worked on several impressive AI/ML projects including multi-agent RCA systems, LLM fine-tuning pipelines, and scalable search utilities over millions of documents.";
+                    else if (lm.includes('contact') || lm.includes('email') || lm.includes('reach')) response = "You can reach Prakhar via email at prakharmishra137@gmail.com or through LinkedIn and GitHub — scroll to the contact section below!";
+                    else if (lm.includes('hello') || lm.includes('hi') || lm.includes('hey')) response = "Hello! I'm here to help you learn more about Prakhar's work. Ask me about his experience, skills, or how to get in touch.";
                     hideTypingIndicator();
                     addMessage(response);
                 } else {
-                    const response = await fetch(API_ENDPOINT, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            message: message,
-                            timestamp: new Date().toISOString()
-                        })
-                    });
-                    
-                    if (!response.ok) {
-                        throw new Error('API request failed');
-                    }
-                    
-                    const data = await response.json();
+                    const res  = await fetch(API_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message, timestamp: new Date().toISOString() }) });
+                    if (!res.ok) throw new Error('API request failed');
+                    const data = await res.json();
                     hideTypingIndicator();
                     addMessage(data.response || 'Sorry, I encountered an error. Please try again.');
                 }
             } catch (error) {
                 console.error('Chatbot error:', error);
                 hideTypingIndicator();
-                addMessage('Sorry, I\'m having trouble connecting right now. Please try again later or use the contact form below.');
+                addMessage("Sorry, I'm having trouble connecting right now. Please try again later or use the contact form below.");
             } finally {
                 chatbotInput.disabled = false;
-                sendButton.disabled = false;
+                sendButton.disabled   = false;
                 chatbotInput.focus();
             }
         }
 
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
-        }
+        function handleKeyPress(event) { if (event.key === 'Enter') sendMessage(); }
 
-        // Video player controls
         const introVideo = document.getElementById('introVideo');
-        const muteBtn = document.getElementById('muteBtn');
+        const muteBtn    = document.getElementById('muteBtn');
 
-        window.addEventListener('load', function() {
-            introVideo.play().catch(err => console.log('Autoplay prevented:', err));
-        });
+        window.addEventListener('load', () => introVideo.play().catch(err => console.log('Autoplay prevented:', err)));
 
-        function togglePlayPause() {
-            if (introVideo.paused) {
-                introVideo.play();
-            } else {
-                introVideo.pause();
-            }
-        }
+        function togglePlayPause() { introVideo.paused ? introVideo.play() : introVideo.pause(); }
 
         function toggleMute(event) {
             event.stopPropagation();
-            introVideo.muted = !introVideo.muted;
+            introVideo.muted    = !introVideo.muted;
             muteBtn.textContent = introVideo.muted ? '🔇' : '🔊';
-            muteBtn.title = introVideo.muted ? 'Unmute' : 'Mute';
+            muteBtn.title       = introVideo.muted ? 'Unmute' : 'Mute';
         }
     </script>
 </body>
