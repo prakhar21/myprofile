@@ -35,7 +35,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated grid background */
         body::before {
             content: '';
             position: fixed;
@@ -57,7 +56,6 @@
             100% { transform: translate(40px, 40px); }
         }
 
-        /* Terminal cursor effect */
         .cursor {
             display: inline-block;
             width: 2px;
@@ -73,14 +71,12 @@
             50%, 100% { opacity: 0; }
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        /* Header/Nav */
         header {
             position: fixed;
             top: 0;
@@ -145,7 +141,6 @@
             color: var(--accent-primary);
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -365,7 +360,6 @@
             border-color: var(--accent-secondary);
         }
 
-        /* Section Styles */
         section {
             padding: 6rem 0;
             position: relative;
@@ -393,7 +387,6 @@
             color: var(--text-primary);
         }
 
-        /* Experience Timeline */
         .timeline {
             position: relative;
             padding-left: 2rem;
@@ -497,7 +490,6 @@
             color: var(--accent-secondary);
         }
 
-        /* Skills Grid */
         .skills-container {
             display: flex;
             flex-wrap: wrap;
@@ -544,7 +536,6 @@
             left: 0;
         }
 
-        /* Publications */
         .publications-list {
             display: flex;
             flex-direction: column;
@@ -596,7 +587,6 @@
             color: var(--accent-secondary);
         }
 
-        /* Contact Section */
         .contact-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -646,7 +636,6 @@
             transform: translateX(0);
         }
 
-        /* Footer */
         footer {
             background: var(--bg-secondary);
             border-top: 1px solid var(--border);
@@ -660,7 +649,6 @@
             color: var(--text-dim);
         }
 
-        /* Chatbot Widget */
         .chatbot-trigger {
             position: fixed;
             bottom: 2rem;
@@ -1151,7 +1139,85 @@
             box-shadow: 0 4px 20px rgba(10, 102, 194, 0.3);
         }
 
-        /* Scroll animations */
+        /* Medium Stats Badge */
+        .medium-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem auto 2rem;
+            padding: 1rem 2rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-left: 4px solid #00AB6C;
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+
+        .medium-stats:hover {
+            border-left-color: var(--accent-primary);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0, 171, 108, 0.2);
+        }
+
+        .medium-icon {
+            font-size: 1.5rem;
+            color: #00AB6C;
+            font-weight: bold;
+        }
+
+        .medium-icon::before {
+            content: 'M';
+            font-family: 'JetBrains Mono', monospace;
+            background: #00AB6C;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 2px;
+            font-size: 1.2rem;
+        }
+
+        .medium-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            letter-spacing: 1px;
+        }
+
+        .medium-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Medium Article Grid - HORIZONTAL ALIGNMENT */
+        .medium-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+
+        .medium-grid iframe {
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            background: var(--bg-secondary);
+        }
+
+        .medium-grid iframe:hover {
+            border-color: #00AB6C;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0, 171, 108, 0.3);
+        }
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -1166,7 +1232,8 @@
         /* MOBILE RESPONSIVE */
         @media (max-width: 1024px) {
             .video-grid,
-            .post-grid {
+            .post-grid,
+            .medium-grid {
                 flex-wrap: wrap;
                 justify-content: center;
             }
@@ -1176,9 +1243,10 @@
                 height: 215px;
             }
             
-            .post-grid iframe {
-                width: 450px;
-                height: 530px;
+            .post-grid iframe,
+            .medium-grid iframe {
+                width: 360px;
+                height: 420px;
             }
         }
 
@@ -1235,14 +1303,17 @@
             }
 
             .youtube-stats,
-            .linkedin-stats {
+            .linkedin-stats,
+            .medium-stats {
                 flex-direction: column;
                 gap: 0.5rem;
                 text-align: center;
                 padding: 1rem;
             }
 
-            .video-grid {
+            .video-grid,
+            .post-grid,
+            .medium-grid {
                 flex-direction: column;
                 overflow-x: visible;
             }
@@ -1254,16 +1325,11 @@
                 aspect-ratio: 16/9;
             }
 
-            .post-grid {
-                flex-direction: column;
-                align-items: center;
-                overflow-x: visible;
-            }
-
-            .post-grid iframe {
+            .post-grid iframe,
+            .medium-grid iframe {
                 width: 100%;
                 max-width: 450px;
-                height: 530px;
+                height: 420px;
             }
 
             .chatbot-container {
@@ -1294,11 +1360,8 @@
                 margin-right: 0;
             }
 
-            .post-grid iframe {
-                width: 100%;
-                max-width: 100%;
-            }
-
+            .post-grid iframe,
+            .medium-grid iframe,
             .video-grid iframe {
                 width: 100%;
                 max-width: 100%;
@@ -1619,6 +1682,43 @@
                         frameborder="0" 
                         allowfullscreen="" 
                         title="Embedded post">
+                    </iframe>
+                </div>
+
+                <!-- Medium Stats Badge -->
+                <div class="medium-stats">
+                    <span class="medium-icon"></span>
+                    <span class="medium-count">5K+</span>
+                    <span class="medium-label">Medium Followers</span>
+                </div>
+                
+                <!-- Medium Article Grid -->
+                <!-- INSTRUCTIONS: Replace the src URLs below with your Medium article embed URLs -->
+                <!-- To get embed URL: Go to your Medium article → Click share → Copy embed code → Extract the src URL -->
+                <div class="medium-grid">
+                    <iframe 
+                        src="https://medium.com/data-science/understanding-masked-language-models-mlm-and-causal-language-models-clm-in-nlp-194c15f56a5?sk=d112cce10b5dfd62f4cd68a8911b34cb" 
+                        height="420" 
+                        width="360" 
+                        frameborder="0" 
+                        scrolling="no"
+                        title="Medium article 1">
+                    </iframe>
+                    <iframe 
+                        src="https://prakhar-mishra.medium.com/10-popular-keyword-extraction-algorithms-in-natural-language-processing-8975ada5750c?sk=f292dd0ffb1d8c312360cd8d070ed2d3" 
+                        height="420" 
+                        width="360" 
+                        frameborder="0" 
+                        scrolling="no"
+                        title="Medium article 2">
+                    </iframe>
+                    <iframe 
+                        src="https://medium.com/data-science/5-outlier-detection-methods-that-every-data-enthusiast-must-know-f917bf439210?sk=7dfbfd1e58af5c5c3bbac32c66260438" 
+                        height="420" 
+                        width="360" 
+                        frameborder="0" 
+                        scrolling="no"
+                        title="Medium article 3">
                     </iframe>
                 </div>
             </div>
