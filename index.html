@@ -1016,12 +1016,18 @@
         /* Target the iframe Medium injects AND the anchor before conversion */
         .medium-embed-wrapper iframe,
         .medium-embed-wrapper a.m-story {
+            background: transparent !important;
             display: block !important;
             width: 360px !important;
-            height: 400px !important;
+            height: 420px !important;
             border: none !important;
             max-width: 100% !important;
         }
+        
+        .medium-embed-wrapper a.m-story > div:last-child {
+            display: none !important;
+        }
+        
 
         /* ── Scroll animations ── */
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -1032,9 +1038,9 @@
             .video-grid, .post-grid, .medium-grid { flex-wrap: wrap; justify-content: center; }
             .video-grid iframe { width: 360px; height: 215px; }
             .post-grid iframe { width: 360px; height: 360px; }
-            .medium-embed-wrapper { width: 360px; height: 300px; }
+            .medium-embed-wrapper { width: 360px; height: 420px; }
             .medium-embed-wrapper iframe,
-            .medium-embed-wrapper a.m-story { width: 360px !important; height: 300px !important; }
+            .medium-embed-wrapper a.m-story { width: 360px !important; height: 420px !important;}
         }
 
         @media (max-width: 768px) {
@@ -1054,9 +1060,9 @@
             .video-grid, .post-grid, .medium-grid { flex-direction: column; overflow-x: visible; }
             .video-grid iframe { width: 100%; max-width: 450px; height: auto; aspect-ratio: 16/9; }
             .post-grid iframe { width: 100%; max-width: 450px; height: 420px; }
-            .medium-embed-wrapper { width: 100%; max-width: 450px; height: 500px; }
+            .medium-embed-wrapper { width: 100%; max-width: 450px; height: 420px; }
             .medium-embed-wrapper iframe,
-            .medium-embed-wrapper a.m-story { width: 100% !important; height: 500px !important; }
+            .medium-embed-wrapper a.m-story { width: 100% !important; height: 420px !important; background: transparent !important;}
             .chatbot-container { width: calc(100vw - 2rem); right: 1rem; left: 1rem; height: 500px; }
             .chatbot-trigger { bottom: 1.5rem; right: 1.5rem; }
             .social-links { flex-wrap: wrap; gap: 1rem; }
@@ -1068,7 +1074,7 @@
             .post-grid iframe, .video-grid iframe { width: 100%; max-width: 100%; }
             .medium-embed-wrapper { width: 100%; max-width: 100%; }
             .medium-embed-wrapper iframe,
-            .medium-embed-wrapper a.m-story { width: 100% !important; }
+            .medium-embed-wrapper a.m-story { width: 100% !important; background: transparent !important;}
         }
         
         /* ── Instagram ── */
@@ -1255,8 +1261,8 @@
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-date">Jan 2022 - June 2022</div>
-                    <div class="timeline-title">Data Science Internship - REMOTE, INDIA</div>
-                    <div class="timeline-company">UDAAN</div>
+                    <div class="timeline-title">Data Science Internship</div>
+                    <div class="timeline-company">UDAAN - REMOTE, INDIA</div>
                     <ul class="timeline-highlights">
                         <li>Led the development and optimization of <span style="color: #00ff88;">Vertical Prediction model for e-commerce search</span> queries for enhancing customer experience by providing relevant search results and recommendations. Trained a fastText model on data collected using signals from historical user interactions with items on the platform. Improving result relevance and driving a <span style="color: #00ff88;">14% lift in Add-to-Cart orders</span> in Electronics and FMCG via A/B testing.</li>
                     </ul>
